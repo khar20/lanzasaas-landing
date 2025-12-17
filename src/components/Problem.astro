@@ -1,0 +1,104 @@
+---
+const problems = [
+    {
+        title: "Solo Founders",
+        desc: "Intentar hacerlo todo solo lleva al burnout. El código es fácil, el negocio es difícil.",
+        icon: "👤",
+    },
+    {
+        title: "MVPs Eternos",
+        desc: "Productos que nunca ven la luz porque se busca una perfección innecesaria antes de validar.",
+        icon: "🚀",
+    },
+    {
+        title: "Marketing Desconectado",
+        desc: "Construir primero y buscar clientes después. La receta perfecta para el fracaso.",
+        icon: "📢",
+    },
+];
+---
+
+<section class="problem">
+    <div class="container">
+        <div class="header">
+            <h2>La mayoría de ideas SaaS mueren por una razón</h2>
+            <p>El problema no es la idea. <strong>Es el sistema.</strong></p>
+        </div>
+        <div class="grid">
+            {
+                problems.map((item) => (
+                    <div class="card">
+                        <div class="icon">{item.icon}</div>
+                        <h3>{item.title}</h3>
+                        <p>{item.desc}</p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .problem {
+        padding: 80px 0;
+        background: linear-gradient(to bottom, var(--bg-dark), #080f0c);
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .header h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .header p {
+        color: var(--text-gray);
+    }
+    .header strong {
+        color: var(--text-white);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        background: var(--bg-card);
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        background: var(--bg-card-hover);
+    }
+
+    .icon {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary-green);
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        color: var(--text-gray);
+    }
+
+    @media (max-width: 768px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

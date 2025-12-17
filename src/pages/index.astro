@@ -1,16 +1,26 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Audience from "../components/Audience.astro";
+import Problem from "../components/Problem.astro";
+import Process from "../components/Process.astro";
+import Features from "../components/Features.astro";
+import Profiles from "../components/Profiles.astro";
+import FooterCTA from "../components/FooterCTA.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="LanzaSaaS LAB | Donde las ideas se convierten en SaaS reales">
+	<Navbar />
+	<main>
+		<Hero />
+		<Audience />
+		<Problem />
+		<Process />
+		<Features />
+		<Profiles />
+		<FooterCTA />
+	</main>
+	<Footer />
+</Layout>

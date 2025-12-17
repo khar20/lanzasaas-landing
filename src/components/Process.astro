@@ -1,0 +1,118 @@
+---
+const steps = [
+    {
+        num: 1,
+        title: "IDEA",
+        desc: "Validación ruthless. Filtramos lo que no tiene mercado antes de código.",
+    },
+    {
+        num: 2,
+        title: "MVP",
+        desc: "Formación de equipos y desarrollo enfocado. Solo lo esencial.",
+    },
+    {
+        num: 3,
+        title: "LANZAMIENTO",
+        desc: "Estrategia Go-to-Market desde el día 1. No lanzamos al vacío.",
+    },
+    {
+        num: 4,
+        title: "ESCALA",
+        desc: "Automatización, Growth y Co-funding para el siguiente nivel.",
+    },
+];
+---
+
+<section class="process">
+    <div class="container">
+        <h2>Un sistema claro para crear SaaS que funcionan</h2>
+        <div class="steps">
+            {
+                steps.map((step) => (
+                    <div class="step">
+                        <div class="circle">{step.num}</div>
+                        <h3>{step.title}</h3>
+                        <p>{step.desc}</p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .process {
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 60px;
+        font-size: 2rem;
+    }
+
+    .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        position: relative;
+    }
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    /* connecting line */
+    .steps::before {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 12%;
+        right: 12%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 0;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--bg-dark);
+        border: 1px solid var(--primary-green);
+        color: var(--primary-green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        z-index: 1;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 0.85rem;
+        color: var(--text-gray);
+        max-width: 200px;
+    }
+
+    @media (max-width: 768px) {
+        .steps {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        .steps::before {
+            display: none;
+        }
+    }
+</style>

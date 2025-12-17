@@ -1,0 +1,164 @@
+---
+
+---
+
+<section class="audience">
+    <div class="container grid">
+        <div class="content">
+            <h2>
+                Esto no es una comunidad para <span class="strike"
+                    >curiosos</span
+                >.
+            </h2>
+            <p class="description">
+                Buscamos builders, partners y ejecutores. El LAB está diseñado
+                para filtrar el ruido y centrarse en la señal.
+            </p>
+
+            <div class="card bad">
+                <div class="icon red">✕</div>
+                <div class="text">
+                    <strong>NO es para ti si buscas:</strong>
+                    <p>
+                        Coleccionar cursos, motivación vacía o networking
+                        superficial de tarjetas de visita.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card good">
+                <div class="icon green">✓</div>
+                <div class="text">
+                    <strong>SÍ es para ti si eres:</strong>
+                    <p>
+                        Builder, partner o ejecutor que quiere ensuciarse las
+                        manos y lanzar productos reales al mercado.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <!-- placeholder image -->
+            <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop"
+                alt="Coding Setup"
+            />
+            <div class="overlay"></div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .audience {
+        padding: 80px 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .strike {
+        text-decoration: line-through;
+        text-decoration-color: var(--accent-red);
+        text-decoration-thickness: 3px;
+        color: var(--accent-red);
+    }
+
+    .description {
+        color: var(--text-gray);
+        margin-bottom: 2rem;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        gap: 15px;
+        margin-bottom: 1rem;
+    }
+
+    .card.good {
+        background: rgba(74, 222, 128, 0.05);
+        border-color: rgba(74, 222, 128, 0.2);
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        flex-shrink: 0;
+        font-size: 0.8rem;
+    }
+
+    .icon.red {
+        background: rgba(239, 68, 68, 0.2);
+        color: var(--accent-red);
+    }
+    .icon.green {
+        background: var(--primary-green);
+        color: black;
+    }
+
+    .text strong {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 0.9rem;
+    }
+
+    .text strong {
+        color: var(--text-white);
+    }
+    .card.bad .text strong {
+        color: var(--accent-red);
+    }
+    .card.good .text strong {
+        color: var(--primary-green);
+    }
+
+    .text p {
+        font-size: 0.85rem;
+        color: var(--text-gray);
+        line-height: 1.4;
+    }
+
+    .image-wrapper {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        aspect-ratio: 4/3;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .image-wrapper .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, var(--bg-dark), transparent);
+        opacity: 0.3;
+    }
+
+    @media (max-width: 768px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

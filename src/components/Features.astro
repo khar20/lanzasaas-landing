@@ -1,0 +1,139 @@
+---
+const features = [
+    {
+        title: "Lab de Ideas",
+        desc: "Banco de ideas validadas listas para ser ejecutadas.",
+        icon: "💡",
+    },
+    {
+        title: "Squads de Ejecución",
+        desc: "Te emparejamos con perfiles complementarios.",
+        icon: "👥",
+    },
+    {
+        title: "Sprints de MVP",
+        desc: "Metodología ágil para pasar de cero a producto en semanas.",
+        icon: "⚡",
+    },
+    {
+        title: "Feedback Real",
+        desc: "Críticas honestas de otros builders y usuarios reales.",
+        icon: "💬",
+    },
+    {
+        title: "Growth & AI",
+        desc: "Sistemas de automatización e IA para escalar operaciones.",
+        icon: "🤖",
+    },
+    {
+        title: "Dirección Estratégica",
+        desc: "Guía constante para evitar bloqueos y mantener foco.",
+        icon: "🎯",
+    },
+];
+---
+
+<section class="features">
+    <div class="container">
+        <div class="header">
+            <h2>¿Qué ocurre dentro de LanzaSaaS LAB?</h2>
+            <div class="sub-link">
+                <span class="text-gray"
+                    >Aquí no vienes a mirar. Vienes a participar.</span
+                >
+                <a href="#" class="link-green">Ver metodología completa →</a>
+            </div>
+        </div>
+
+        <div class="grid">
+            {
+                features.map((f) => (
+                    <div class="card">
+                        <div class="icon-box">{f.icon}</div>
+                        <div class="info">
+                            <h3>{f.title}</h3>
+                            <p>{f.desc}</p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .features {
+        padding: 80px 0;
+        background: #080f0d;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .sub-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+
+    .link-green {
+        color: var(--primary-green);
+        font-weight: 600;
+        font-size: 0.85rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        background: var(--bg-card);
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .icon-box {
+        width: 40px;
+        height: 40px;
+        background: rgba(74, 222, 128, 0.1);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: 0.8rem;
+        color: var(--text-gray);
+    }
+
+    @media (max-width: 768px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+        .sub-link {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    }
+</style>
