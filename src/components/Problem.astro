@@ -1,19 +1,19 @@
 ---
 const problems = [
     {
-        title: "Solo Founders",
-        desc: "Intentar hacerlo todo solo lleva al burnout. El código es fácil, el negocio es difícil.",
-        icon: "👤",
+        title: "Visión Fragmentada",
+        desc: "Desarrollar código es solo el comienzo. Un negocio exitoso necesita estrategia de mercado integrada desde el primer día.",
+        icon: "🧩",
     },
     {
-        title: "MVPs Eternos",
-        desc: "Productos que nunca ven la luz porque se busca una perfección innecesaria antes de validar.",
-        icon: "🚀",
+        title: "Desarrollo Sin Fin",
+        desc: "Lanzar es aprender. Construimos solo lo esencial para validar tracción con usuarios reales.",
+        icon: "⏳",
     },
     {
-        title: "Marketing Desconectado",
-        desc: "Construir primero y buscar clientes después. La receta perfecta para el fracaso.",
-        icon: "📢",
+        title: "Construir en el Vacío",
+        desc: "La estrategia de mercado no es opcional. Definimos cómo llegarás a tus clientes antes de escribir la primera línea de código.",
+        icon: "🌫️",
     },
 ];
 ---
@@ -21,8 +21,11 @@ const problems = [
 <section class="problem">
     <div class="container">
         <div class="header">
-            <h2>La mayoría de ideas SaaS mueren por una razón</h2>
-            <p>El problema no es la idea. <strong>Es el sistema.</strong></p>
+            <h2>Resolvemos los obstáculos reales de crear software</h2>
+            <p>
+                El problema no es tu idea. <strong
+                    >Es no tener un sistema completo para ejecutarla.</strong>
+            </p>
         </div>
         <div class="grid">
             {
@@ -40,21 +43,22 @@ const problems = [
 
 <style>
     .problem {
-        padding: 80px 0;
-        background: linear-gradient(to bottom, var(--bg-dark), #080f0c);
+        padding: 100px 0;
+        background: linear-gradient(to bottom, var(--bg-dark), #09120f);
     }
 
     .header {
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 70px;
     }
 
     .header h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
+        font-size: 2.2rem;
+        margin-bottom: 15px;
     }
 
     .header p {
+        font-size: 1.1rem;
         color: var(--text-gray);
     }
     .header strong {
@@ -64,36 +68,38 @@ const problems = [
     .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 30px;
     }
 
     .card {
         background: var(--bg-card);
-        padding: 30px;
-        border-radius: 12px;
+        padding: 35px;
+        border-radius: 16px;
         border: 1px solid rgba(255, 255, 255, 0.05);
         transition: transform 0.2s;
+        height: 100%;
     }
 
     .card:hover {
         transform: translateY(-5px);
         background: var(--bg-card-hover);
+        border-color: rgba(74, 222, 128, 0.1);
     }
 
     .icon {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: var(--primary-green);
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         color: var(--text-gray);
+        line-height: 1.6;
     }
 
     @media (max-width: 768px) {

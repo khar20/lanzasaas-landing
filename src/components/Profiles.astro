@@ -5,45 +5,65 @@
 <section class="profiles">
     <div class="container grid">
         <div class="left">
-            <h2>Perfiles que encajan en el LAB</h2>
+            <h2>¿Es el LAB para ti?</h2>
+            <p class="intro">Este entorno es para perfiles que ejecutan:</p>
             <div class="list">
                 <div class="item">
                     <span class="code-icon">&lt;/&gt;</span>
-                    Developers & Builders
+                    <div class="text">
+                        <strong>Developers & Builders</strong>
+                        <span
+                            >Que quieren construir productos con tracción real</span
+                        >
+                    </div>
                 </div>
                 <div class="item">
                     <span class="icon">📢</span>
-                    Marketers & Growth Hackers
+                    <div class="text">
+                        <strong>Marketers & Growth Hackers</strong>
+                        <span
+                            >Listos para diseñar estrategias de adquisición
+                            efectivas</span
+                        >
+                    </div>
                 </div>
                 <div class="item">
                     <span class="icon">📊</span>
-                    Product Managers
+                    <div class="text">
+                        <strong>Product Managers</strong>
+                        <span
+                            >Que entienden al usuario y pueden traducir
+                            necesidades</span
+                        >
+                    </div>
                 </div>
                 <div class="item">
                     <span class="icon">💎</span>
-                    Emprendedores buscando Socios
+                    <div class="text">
+                        <strong>Emprendedores Técnicos</strong>
+                        <span
+                            >Buscando co-founders o equipos para ejecutar su
+                            visión</span
+                        >
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="right card-founder">
-            <h3>Dirección, no mentoría vacía</h3>
+            <h3>Mi rol: Dirección estratégica y visión de negocio</h3>
             <p>
-                Mi rol no es darte una charla motivacional. Mi trabajo es
-                aportar visión estratégica, validar la viabilidad de tu idea
-                antes de que pierdas tiempo, y conectarte con el talento
-                adecuado.
+                Aporto experiencia en estrategia de mercado, valido la
+                viabilidad comercial de cada proyecto y aseguro que mantengas el
+                foco en lo que genera valor. Mi trabajo es darte claridad y
+                dirección cuando más la necesitas.
             </p>
-            <div class="highlight-text">
-                Aquí no hay gurús.<br />
-                <span class="green">Hay dirección.</span>
-            </div>
+
             <div class="founder">
                 <div class="avatar"></div>
-                <!-- placeholder avatar -->
                 <div class="info">
-                    <strong>León</strong>
-                    <span>Fundador LanzaSaaS LAB</span>
+                    <strong class="text-white">León</strong>
+                    <span>Fundador, LanzaSaaS LAB</span>
                 </div>
             </div>
         </div>
@@ -53,17 +73,23 @@
 <style>
     .profiles {
         padding: 100px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 80px;
+        align-items: flex-start;
     }
 
     h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .intro {
+        color: var(--text-gray);
         margin-bottom: 30px;
     }
 
@@ -76,59 +102,77 @@
     .item {
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid rgba(255, 255, 255, 0.05);
-        padding: 15px 20px;
-        border-radius: 50px;
+        padding: 20px;
+        border-radius: 12px;
         display: flex;
         align-items: center;
-        gap: 15px;
-        font-weight: 500;
-        font-size: 0.95rem;
+        gap: 20px;
     }
 
-    .code-icon {
+    .item .text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item strong {
+        color: var(--text-white);
+        font-size: 1rem;
+    }
+    .item span {
+        color: var(--text-gray);
+        font-size: 0.85rem;
+    }
+
+    .code-icon,
+    .icon {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
         color: var(--primary-green);
-        font-weight: bold;
-        font-family: monospace;
     }
 
     .card-founder {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: radial-gradient(
+            circle at top right,
+            #1a2e24 0%,
+            #0c1410 100%
+        );
+        border: 1px solid rgba(74, 222, 128, 0.2);
         padding: 40px;
-        border-radius: 16px;
+        border-radius: 20px;
+        position: sticky;
+        top: 100px;
     }
 
     .card-founder h3 {
         font-size: 1.5rem;
         margin-bottom: 20px;
+        color: var(--primary-green);
     }
 
     .card-founder p {
         color: var(--text-gray);
-        font-size: 0.95rem;
-        margin-bottom: 25px;
-    }
-
-    .highlight-text {
-        font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-bottom: 30px;
-        line-height: 1.3;
-    }
-
-    .green {
-        color: var(--primary-green);
+        line-height: 1.6;
     }
 
     .founder {
         display: flex;
         align-items: center;
         gap: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
     }
 
     .avatar {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         background: #333;
         border-radius: 50%;
         background-image: url("https://ui-avatars.com/api/?name=Leon&background=4ade80&color=000");
@@ -138,17 +182,20 @@
     .founder .info {
         display: flex;
         flex-direction: column;
-        font-size: 0.85rem;
     }
 
     .founder span {
         color: var(--text-gray);
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         .grid {
             grid-template-columns: 1fr;
+            gap: 50px;
+        }
+        .card-founder {
+            position: static;
         }
     }
 </style>

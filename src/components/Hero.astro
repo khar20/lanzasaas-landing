@@ -4,30 +4,25 @@
 
 <section class="hero">
     <div class="container hero-content">
-        <div class="pill">● Comunidad Privada</div>
+        <div class="pill-container">
+            <p class="core-value">Combinamos talento con un proceso probado</p>
+        </div>
+
         <h1>
-            Donde las ideas se <br /> convierten en <span class="highlight"
-                >SaaS reales.</span>
+            Transforma tus ideas en <br />
+            <span class="highlight">negocios de software reales.</span>
         </h1>
+
         <p class="subtitle">
-            LanzaSaaS LAB es una comunidad privada de builders, marketers y
-            estrategas que se asocian para crear, lanzar y escalar software
-            rentable.
+            LanzaSaaS LAB es el lugar donde builders, marketers y estrategas
+            construyen y escalan productos digitales que generan ingresos.
         </p>
-        <p class="disclaimer">
-            No es formación. No es networking. <span class="text-green"
-                >Es ejecución y co-funding.</span
-            >
-        </p>
+
         <div class="cta-wrapper">
-            <a href="#" class="btn btn-primary btn-large"
-                >Solicitar acceso ahora</a
-            >
-            <span class="meta">Aplicación requerida · Plazas limitadas</span>
+            <a href="#apply" class="btn btn-primary btn-large">Únete al LAB</a>
         </div>
     </div>
 
-    <!-- decorative background dots -->
     <div class="bg-dots"></div>
 </section>
 
@@ -47,17 +42,22 @@
         align-items: center;
     }
 
-    .pill {
-        background: rgba(74, 222, 128, 0.1);
-        color: var(--primary-green);
-        border: 1px solid rgba(74, 222, 128, 0.2);
-        padding: 6px 16px;
-        border-radius: 20px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-transform: uppercase;
+    .pill-container {
         margin-bottom: 2rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 8px 20px;
+        border-radius: 50px;
+    }
+
+    .core-value {
+        font-size: 0.85rem;
+        color: var(--primary-green);
+        font-weight: 500;
+    }
+
+    .text-white {
+        color: var(--text-white);
     }
 
     h1 {
@@ -65,42 +65,30 @@
         font-weight: 800;
         margin-bottom: 1.5rem;
         letter-spacing: -0.02em;
+        line-height: 1.1;
     }
 
     .highlight {
-        color: var(--primary-green);
+        background: -webkit-linear-gradient(
+            45deg,
+            #ffffff,
+            var(--primary-green)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .subtitle {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         color: var(--text-gray);
-        max-width: 600px;
-        margin-bottom: 1rem;
-    }
-
-    .disclaimer {
-        font-size: 0.9rem;
-        font-weight: 600;
-        margin-bottom: 3rem;
-    }
-
-    .cta-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+        max-width: 700px;
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
     }
 
     .btn-large {
-        padding: 16px 32px;
+        padding: 16px 40px;
         font-size: 1.1rem;
-    }
-
-    .meta {
-        font-size: 0.7rem;
-        color: var(--text-gray);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
     }
 
     .bg-dots {
