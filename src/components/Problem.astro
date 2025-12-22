@@ -6,7 +6,24 @@
     <div class="container">
         <!-- The Problem -->
         <div class="header">
-            <h2>❌ El problema real de la mayoría de SaaS</h2>
+            <div class="icon-header-wrapper">
+                <svg
+                    class="icon-header-red"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><circle cx="12" cy="12" r="10"></circle><line
+                        x1="15"
+                        y1="9"
+                        x2="9"
+                        y2="15"></line><line x1="9" y1="9" x2="15" y2="15"
+                    ></line></svg
+                >
+                <h2>El problema real de la mayoría de SaaS</h2>
+            </div>
             <p>
                 La mayoría de ideas SaaS no fracasan por falta de talento. <strong
                     >Fracasan por esto:</strong>
@@ -30,7 +47,21 @@
         <!-- The Alternative -->
         <div class="alternative-box">
             <div class="alt-header">
-                <h2>✅ La alternativa: LanzaSaaS LAB</h2>
+                <div class="icon-header-wrapper">
+                    <svg
+                        class="icon-header-green"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                        ></path><polyline points="22 4 12 14.01 9 11.01"
+                        ></polyline></svg
+                    >
+                    <h2>La alternativa: LanzaSaaS LAB</h2>
+                </div>
                 <p>
                     LanzaSaaS LAB existe para cerrar la brecha entre idea y
                     negocio real.
@@ -38,19 +69,59 @@
             </div>
             <div class="alt-grid">
                 <div class="check-item">
-                    <span class="check">✓</span>
+                    <div class="check">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><polyline points="20 6 9 17 4 12"></polyline></svg
+                        >
+                    </div>
                     <p>Las ideas se estructuran</p>
                 </div>
                 <div class="check-item">
-                    <span class="check">✓</span>
+                    <div class="check">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><polyline points="20 6 9 17 4 12"></polyline></svg
+                        >
+                    </div>
                     <p>Los MVPs se construyen rápido</p>
                 </div>
                 <div class="check-item">
-                    <span class="check">✓</span>
+                    <div class="check">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><polyline points="20 6 9 17 4 12"></polyline></svg
+                        >
+                    </div>
                     <p>El mercado decide (datos mandan)</p>
                 </div>
                 <div class="check-item">
-                    <span class="check">✓</span>
+                    <div class="check">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><polyline points="20 6 9 17 4 12"></polyline></svg
+                        >
+                    </div>
                     <p>El equipo comparte riesgo y upside</p>
                 </div>
             </div>
@@ -74,15 +145,36 @@
         margin-bottom: 40px;
     }
 
+    .icon-header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+
+    .icon-header-red {
+        width: 32px;
+        height: 32px;
+        color: var(--accent-red);
+    }
+
+    .icon-header-green {
+        width: 32px;
+        height: 32px;
+        color: var(--primary-green);
+    }
+
     h2 {
         font-size: 2rem;
-        margin-bottom: 10px;
+        margin: 0;
     }
     .header h2 {
         color: var(--accent-red);
     }
     .header p {
         color: var(--text-gray);
+        margin-top: 10px;
     }
 
     .problem-grid {
@@ -129,12 +221,13 @@
 
     .alt-header h2 {
         color: var(--primary-green);
-        margin-bottom: 10px;
+        margin: 0;
     }
     .alt-header p {
         color: var(--text-white);
         margin-bottom: 40px;
         font-size: 1.1rem;
+        margin-top: 10px;
     }
 
     .alt-grid {
@@ -160,8 +253,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: bold;
-        font-size: 1.2rem;
+    }
+
+    .check svg {
+        width: 20px;
+        height: 20px;
     }
 
     .check-item p {
