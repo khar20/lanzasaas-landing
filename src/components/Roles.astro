@@ -1,0 +1,207 @@
+---
+
+---
+
+<section class="roles">
+    <div class="container grid">
+        <div class="left">
+            <h2>👥 La comunidad: personas que construyen</h2>
+            <p class="intro">
+                LanzaSaaS LAB no es una comunidad social. Es una comunidad
+                operativa.
+            </p>
+
+            <div class="role-list">
+                <div class="role">
+                    <div class="role-icon">🧠</div>
+                    <div class="role-content">
+                        <h3>Founder</h3>
+                        <p>
+                            Aporta la idea y visión. Participa en la estrategia.
+                            Comparte riesgo y upside.
+                        </p>
+                    </div>
+                </div>
+                <div class="role">
+                    <div class="role-icon">🧪</div>
+                    <div class="role-content">
+                        <h3>LAB</h3>
+                        <p>
+                            Validación, Testing, Experimentos y Construcción de
+                            MVPs.
+                        </p>
+                    </div>
+                </div>
+                <div class="role">
+                    <div class="role-icon">🛠</div>
+                    <div class="role-content">
+                        <h3>Talent</h3>
+                        <p>
+                            Desarrollo, Marketing, Automatización y Operaciones.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="quote">
+                "Aquí no vienes a aprender. Vienes a construir proyectos
+                reales."
+            </div>
+        </div>
+
+        <div class="right founder-card">
+            <h3>🎙️ Impulsado por la visión de Reggy León</h3>
+            <p>
+                La marca personal no vende promesas. Comparte cómo pensar
+                negocios digitales, errores reales y aprendizajes reales.
+            </p>
+
+            <ul class="values">
+                <li>Esto atrae:</li>
+                <li>✔ Founders serios</li>
+                <li>✔ Talento con mentalidad builder</li>
+                <li>✔ Partners estratégicos</li>
+            </ul>
+
+            <div class="founder-info">
+                <div class="avatar"></div>
+                <div class="meta">
+                    <strong>Reggy León</strong>
+                    <span>LanzaSaaS Ecosystem</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .roles {
+        padding: 100px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 80px;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    .intro {
+        color: var(--text-gray);
+        margin-bottom: 40px;
+    }
+
+    .role-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .role {
+        display: flex;
+        gap: 20px;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .role-icon {
+        font-size: 2rem;
+    }
+    .role h3 {
+        margin-bottom: 5px;
+        color: var(--text-white);
+    }
+    .role p {
+        color: var(--text-gray);
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .quote {
+        margin-top: 30px;
+        font-style: italic;
+        color: var(--primary-green);
+        font-weight: 600;
+        border-left: 3px solid var(--primary-green);
+        padding-left: 20px;
+    }
+
+    .founder-card {
+        background: radial-gradient(
+            circle at top right,
+            #131f18 0%,
+            #0c1410 100%
+        );
+        border: 1px solid rgba(74, 222, 128, 0.15);
+        padding: 40px;
+        border-radius: 20px;
+    }
+
+    .founder-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+    .founder-card p {
+        color: var(--text-gray);
+        margin-bottom: 20px;
+    }
+
+    .values {
+        list-style: none;
+        margin-bottom: 30px;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .values li:first-child {
+        color: var(--text-white);
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .values li:not(:first-child) {
+        color: var(--primary-green);
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+
+    .founder-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #333;
+        background-image: url("https://ui-avatars.com/api/?name=Reggy+Leon&background=4ade80&color=000");
+        background-size: cover;
+    }
+
+    .meta {
+        display: flex;
+        flex-direction: column;
+    }
+    .meta strong {
+        font-size: 1rem;
+    }
+    .meta span {
+        font-size: 0.8rem;
+        color: var(--text-gray);
+    }
+
+    @media (max-width: 900px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

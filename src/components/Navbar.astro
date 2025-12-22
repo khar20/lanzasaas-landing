@@ -5,22 +5,10 @@
 <nav>
     <div class="container nav-content">
         <div class="logo">
-            <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                ><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"
-                ></path><polyline points="14 2 14 8 20 8"></polyline><path
-                    d="M2 15h10"></path><path d="m9 18 3-3-3-3"></path></svg
-            >
+            <span class="icon">🚀</span>
             <span>LanzaSaaS LAB</span>
         </div>
-        <a href="#apply" class="btn btn-primary">Aplicar al LAB</a>
+        <a href="#apply" class="btn btn-primary">Solicitar acceso</a>
     </div>
 </nav>
 
@@ -31,7 +19,7 @@
         width: 100%;
         padding: 20px 0;
         z-index: 100;
-        background: rgba(5, 10, 8, 0.8);
+        background: rgba(5, 10, 8, 0.9);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
@@ -46,11 +34,12 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        font-weight: 700;
+        font-weight: 800;
         font-size: 1.1rem;
+        letter-spacing: -0.5px;
     }
 
-    .logo svg {
-        color: var(--primary-green);
+    .icon {
+        font-size: 1.2rem;
     }
 </style>

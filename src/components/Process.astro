@@ -1,49 +1,40 @@
 ---
 const steps = [
-    {
-        num: 1,
-        title: "IDEA",
-        sub: "Validación de Mercado",
-        desc: "Analizamos y refinamos tu concepto para asegurar su viabilidad comercial antes de invertir tiempo en desarrollo.",
-    },
+    { num: 1, title: "IDEA", desc: "Traes una idea con potencial real." },
     {
         num: 2,
-        title: "MVP",
-        sub: "Desarrollo Enfocado",
-        desc: "Construimos exactamente lo necesario para validar tu propuesta con el mercado y aprender de tus primeros usuarios.",
+        title: "SISTEMA",
+        desc: "La estructuramos en BusinessOS: mercado, propuesta, MVP y métricas.",
     },
     {
         num: 3,
-        title: "LANZAMIENTO",
-        sub: "Go-to-Market Estratégico",
-        desc: "Diseñamos tu estrategia de entrada al mercado para generar tracción desde el día uno.",
+        title: "EJECUCIÓN",
+        desc: "El proyecto entra en LanzaSaaS LAB y se construye con equipo real.",
     },
+    { num: 4, title: "MERCADO", desc: "Se lanza, se mide y se valida." },
     {
-        num: 4,
-        title: "ESCALA",
-        sub: "Crecimiento Sostenible",
-        desc: "Implementamos sistemas de growth y optimizamos operaciones para asegurar rentabilidad mientras creces.",
+        num: 5,
+        title: "DECISIÓN",
+        desc: "Escalamos lo que funciona. Matamos rápido lo que no.",
     },
 ];
 ---
 
 <section class="process">
     <div class="container">
-        <h2>
-            Nuestro proceso para crear <span class="text-green"
-                >software de alto valor.</span>
-        </h2>
-        <div class="steps">
-            {
-                steps.map((step) => (
-                    <div class="step">
-                        <div class="circle">{step.num}</div>
-                        <h3>{step.title}</h3>
-                        <span class="sub">{step.sub}</span>
-                        <p>{step.desc}</p>
-                    </div>
-                ))
-            }
+        <h2>🔁 Cómo funciona el proceso</h2>
+        <div class="steps-wrapper">
+            <div class="steps">
+                {
+                    steps.map((step) => (
+                        <div class="step">
+                            <div class="circle">{step.num}</div>
+                            <h3>{step.title}</h3>
+                            <p>{step.desc}</p>
+                        </div>
+                    ))
+                }
+            </div>
         </div>
     </div>
 </section>
@@ -55,15 +46,31 @@ const steps = [
     }
 
     h2 {
-        margin-bottom: 80px;
+        margin-bottom: 60px;
         font-size: 2.2rem;
     }
 
+    .steps-wrapper {
+        position: relative;
+    }
+
     .steps {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        justify-content: space-between;
         gap: 20px;
         position: relative;
+    }
+
+    /* Connecting line */
+    .steps::before {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 50px;
+        right: 50px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 0;
     }
 
     .step {
@@ -71,24 +78,7 @@ const steps = [
         flex-direction: column;
         align-items: center;
         position: relative;
-        padding: 0 10px;
-    }
-
-    /* connecting line */
-    .steps::before {
-        content: "";
-        position: absolute;
-        top: 25px;
-        left: 12%;
-        right: 12%;
-        height: 1px;
-        background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(74, 222, 128, 0.3) 50%,
-            transparent
-        );
-        z-index: 0;
+        flex: 1;
     }
 
     .circle {
@@ -97,50 +87,59 @@ const steps = [
         border-radius: 50%;
         background: var(--bg-dark);
         border: 1px solid var(--primary-green);
-        box-shadow: 0 0 15px rgba(74, 222, 128, 0.2);
         color: var(--primary-green);
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: bold;
         font-size: 1.2rem;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         z-index: 1;
     }
 
     h3 {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
         font-weight: 800;
         letter-spacing: 1px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         color: var(--text-white);
-    }
-
-    .sub {
-        font-size: 0.9rem;
-        color: var(--primary-green);
-        margin-bottom: 15px;
-        font-weight: 600;
     }
 
     p {
         font-size: 0.85rem;
         color: var(--text-gray);
-        line-height: 1.5;
+        line-height: 1.4;
+        max-width: 180px;
     }
 
     @media (max-width: 900px) {
         .steps {
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            flex-direction: column;
+            gap: 40px;
+            align-items: flex-start;
         }
         .steps::before {
-            display: none;
+            top: 0;
+            bottom: 0;
+            left: 25px;
+            width: 2px;
+            height: auto;
+            right: auto;
         }
-    }
-    @media (max-width: 500px) {
-        .steps {
-            grid-template-columns: 1fr;
+        .step {
+            flex-direction: row;
+            gap: 20px;
+            text-align: left;
+        }
+        .circle {
+            margin-bottom: 0;
+            flex-shrink: 0;
+        }
+        h3 {
+            margin-bottom: 5px;
+        }
+        p {
+            max-width: 100%;
         }
     }
 </style>

@@ -1,0 +1,160 @@
+---
+
+---
+
+<section class="business-os">
+    <div class="container">
+        <div class="os-header">
+            <div class="badge">🧠 El Cerebro</div>
+            <h2>Todo empieza en BusinessOS</h2>
+            <p>
+                Antes de construir, pensamos y estructuramos. Cada proyecto pasa
+                por <strong>BusinessOS</strong>, nuestro sistema operativo para
+                crear negocios digitales.
+            </p>
+        </div>
+
+        <div class="os-grid">
+            <div class="os-card">
+                <h3>BusinessOS convierte una idea en:</h3>
+                <ul>
+                    <li>✔ Un proyecto estructurado</li>
+                    <li>✔ Un roadmap claro</li>
+                    <li>✔ Un MVP accionable</li>
+                    <li>✔ Métricas reales</li>
+                    <li>✔ Decisiones objetivas (escalar o matar)</li>
+                </ul>
+                <div class="alert">
+                    Si una idea no pasa el filtro de BusinessOS, no entra en el
+                    LAB.
+                </div>
+            </div>
+
+            <div class="lab-card">
+                <h3>🚀 Qué ocurre dentro del LAB</h3>
+                <p>
+                    Aquí es donde se ejecuta de verdad. No trabajamos por
+                    encargo, participamos con <strong>Skin in the Game</strong> (Revenue
+                    Share / Equity).
+                </p>
+                <div class="features-mini">
+                    <span>Construcción MVP</span>
+                    <span>Validación Demanda</span>
+                    <span>Iteración Rápida</span>
+                    <span>Decisión con Datos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .business-os {
+        padding: 100px 0;
+        background: #080f0c;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .os-header {
+        text-align: center;
+        margin-bottom: 60px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .os-header p {
+        font-size: 1.1rem;
+        color: var(--text-gray);
+    }
+
+    .os-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .os-card,
+    .lab-card {
+        background: var(--bg-card);
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    li {
+        font-size: 1.05rem;
+        display: flex;
+        gap: 10px;
+        color: var(--text-gray);
+    }
+
+    .alert {
+        background: rgba(239, 68, 68, 0.1);
+        color: var(--accent-red);
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .lab-card p {
+        color: var(--text-gray);
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .lab-card strong {
+        color: var(--primary-green);
+    }
+
+    .features-mini {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .features-mini span {
+        background: rgba(74, 222, 128, 0.05);
+        border: 1px solid rgba(74, 222, 128, 0.1);
+        padding: 12px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-white);
+    }
+
+    @media (max-width: 768px) {
+        .os-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
