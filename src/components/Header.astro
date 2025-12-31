@@ -1,0 +1,84 @@
+<header class="header">
+    <div class="container header-inner">
+        <div class="logo">
+            <div class="icon-box">
+                <span class="material-symbols-outlined">rocket_launch</span>
+            </div>
+            <span>LanzaSaaS</span>
+        </div>
+
+        <nav class="desktop-nav">
+            <a href="#que-es">Qué es</a>
+            <a href="#problema">El Problema</a>
+            <a href="#modelo">El Modelo</a>
+            <a href="#vision">Visión</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="btn btn-primary">Únete al Ecosistema</button>
+            <button class="mobile-menu-btn"
+                ><span class="material-symbols-outlined">menu</span></button
+            >
+        </div>
+    </div>
+</header>
+
+<style>
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: rgba(10, 10, 10, 0.85);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-color);
+        padding: 0.75rem 0;
+    }
+    .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+    .logo .icon-box {
+        color: var(--color-primary);
+        display: flex;
+    }
+
+    .desktop-nav {
+        display: none;
+        gap: 2rem;
+    }
+    .desktop-nav a {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-gray);
+    }
+    .desktop-nav a:hover {
+        color: var(--color-primary);
+    }
+
+    .header-actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    .mobile-menu-btn {
+        display: block;
+        color: white;
+    }
+
+    @media (min-width: 1024px) {
+        .desktop-nav {
+            display: flex;
+        }
+        .mobile-menu-btn {
+            display: none;
+        }
+    }
+</style>

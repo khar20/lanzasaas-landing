@@ -1,0 +1,98 @@
+<section class="section final-cta">
+    <div class="container text-center">
+        <h2>LLAMADA FINAL A LA ACCIÓN</h2>
+        <p class="desc mb-8">
+            Construye empresas reales, crece profesionalmente y hazlo en equipo.
+        </p>
+
+        <div class="cta-grid-box">
+            <div class="top-line"></div>
+            <p class="roles-label">ELIGE TU ROL</p>
+            <div class="roles-buttons grid-4">
+                <button class="btn btn-primary btn-block">
+                    <span class="material-symbols-outlined">psychology</span> Soy
+                    Founder
+                </button>
+                <button class="btn btn-outline btn-block">
+                    <span class="material-symbols-outlined">code</span> Soy Técnico
+                </button>
+                <button class="btn btn-outline btn-block">
+                    <span class="material-symbols-outlined">campaign</span> Soy Marketer
+                </button>
+                <button class="btn btn-outline btn-block">
+                    <span class="material-symbols-outlined">school</span> Desde Cero
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .final-cta {
+        background: linear-gradient(to bottom, var(--bg-dark), #000);
+    }
+    .desc {
+        color: var(--text-gray);
+        margin-bottom: 2rem;
+    }
+    .cta-grid-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        padding: 3rem;
+        border-radius: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .top-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            var(--color-primary),
+            transparent
+        );
+        opacity: 0.5;
+    }
+    .roles-label {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #6b7280;
+        margin-bottom: 1.5rem;
+    }
+
+    .grid-4 {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) {
+        .grid-4 {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (min-width: 900px) {
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .btn-block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        height: 100%;
+    }
+    .btn-block .material-symbols-outlined {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+</style>

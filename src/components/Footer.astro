@@ -1,76 +1,60 @@
----
-
----
-
-<footer>
-    <div class="container footer-content">
-        <div class="brand">
-            <svg
-                class="icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="logo">
+            <span class="material-symbols-outlined text-primary"
+                >rocket_launch</span
             >
-                <path
-                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
-                ></path>
-                <path
-                    d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
-                ></path>
-                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-            </svg>
-            LanzaSaaS LAB
+            <span>LanzaSaaS</span>
+        </div>
+        <div class="footer-links">
+            <a href="#">Términos</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Contacto</a>
         </div>
         <div class="copyright">
-            © 2025 LanzaSaaS LAB — De la idea a la ejecución. De la ejecución a
-            los ingresos.
+            © 2025 Lanza Ecosystem. Todos los derechos reservados.
         </div>
     </div>
 </footer>
 
 <style>
-    footer {
-        position: relative;
-        padding: 60px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        overflow: hidden;
-        background: var(--bg-dark);
+    .footer {
+        padding: 3rem 1.5rem;
+        border-top: 1px solid var(--border-color);
+        background: black;
     }
-
-    .footer-content {
-        position: relative;
-        z-index: 1;
+    .footer-inner {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 2rem;
         align-items: center;
-        font-size: 0.85rem;
-        color: #52525b;
+        text-align: center;
     }
-
-    .brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--text-white);
-        font-weight: 700;
-        font-size: 1rem;
-    }
-
-    .icon {
-        width: 20px;
-        height: 20px;
-        color: var(--text-white);
-    }
-
-    @media (max-width: 768px) {
-        .footer-content {
-            flex-direction: column;
-            gap: 20px;
-            text-align: center;
+    @media (min-width: 768px) {
+        .footer-inner {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
         }
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 700;
+        color: white;
+    }
+    .footer-links a {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin: 0 1rem;
+    }
+    .footer-links a:hover {
+        color: var(--color-primary);
+    }
+    .copyright {
+        color: #52525b;
+        font-size: 0.8rem;
     }
 </style>

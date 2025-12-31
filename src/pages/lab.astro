@@ -1,0 +1,667 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Lab: Tech & Marketing | LanzaSaaS">
+    <Header />
+
+    <main>
+        <!-- Hero Lab -->
+        <section class="hero-lab">
+            <div class="bg-lines"></div>
+            <div class="container relative text-center">
+                <div class="badge-lab">
+                    <span class="material-symbols-outlined">science</span>
+                    LanzaSaaS Lab
+                </div>
+
+                <h1 class="hero-title">
+                    El corazón del <span class="text-primary">Ecosistema</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    Donde <span class="text-white">Tech</span> y <span
+                        class="text-white">Marketing</span
+                    > se unen para construir.
+                </h2>
+
+                <p class="hero-desc">
+                    Dos perfiles, un objetivo: Convertir ideas en empresas
+                    reales. Sin ejercicios ficticios. Con equity real.
+                </p>
+
+                <div class="lab-selector">
+                    <a href="#tech" class="selector-btn">
+                        <span class="material-symbols-outlined">code</span> Técnico
+                    </a>
+                    <div class="divider"></div>
+                    <a href="#marketing" class="selector-btn">
+                        <span class="material-symbols-outlined">campaign</span> Marketer
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección TÉCNICO -->
+        <section id="tech" class="section bg-tech relative">
+            <div class="section-badge code-badge">TECH TRACK</div>
+            <div class="container grid-role">
+                <div class="role-content">
+                    <div class="role-header">
+                        <div class="icon-box">
+                            <span class="material-symbols-outlined"
+                                >terminal</span>
+                        </div>
+                        <h2>TÉCNICO</h2>
+                        <p class="role-sub">
+                            Construye productos reales. No ejercicios ficticios.
+                        </p>
+                    </div>
+
+                    <div class="pain-points">
+                        <p>Si eres técnico y:</p>
+                        <ul>
+                            <li>
+                                <span class="dot red"></span> Estás cansado de proyectos
+                                sin alma
+                            </li>
+                            <li>
+                                <span class="dot red"></span> No quieres solo un sueldo
+                            </li>
+                            <li>
+                                <span class="dot green"></span> Quieres participar
+                                en algo que crezca
+                            </li>
+                        </ul>
+                        <p class="welcome-msg">Bienvenido a LanzaSaaS.</p>
+                    </div>
+
+                    <div class="role-tasks">
+                        <h3>🛠️ Tu rol</h3>
+                        <div class="task-grid">
+                            <div class="task">Construcción del MVP</div>
+                            <div class="task">Arquitectura</div>
+                            <div class="task">Iteraciones</div>
+                            <div class="task">Escalabilidad</div>
+                        </div>
+                        <p class="highlight-text">
+                            Aquí no “picas código”. <span class="text-primary"
+                                >Aquí construyes producto.</span>
+                        </p>
+                    </div>
+
+                    <button class="btn btn-outline full-mobile">
+                        👉 Quiero construir SaaS con equity
+                    </button>
+                </div>
+
+                <div class="role-visual tech-visual">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="dot"></span><span class="dot"
+                            ></span><span class="dot"></span>
+                        </div>
+                        <pre><code>{`const technicalRole = {
+  mission: "Build Real Products",
+  focus: ["MVP", "Scale"],
+  equity: "20-30%",
+  outcome: "Assets"
+};`}</code></pre>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Equity</span>
+                        <span class="stat-value text-primary">20–30%</span>
+                        <span class="stat-desc"
+                            >Tu trabajo crea valor, no solo horas.</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección MARKETER -->
+        <section id="marketing" class="section bg-marketing relative">
+            <div class="section-badge growth-badge">GROWTH TRACK</div>
+            <div class="container grid-role reverse">
+                <div class="role-visual marketing-visual">
+                    <div class="chart-block">
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 30%"></div>
+                            <div class="bar" style="height: 50%"></div>
+                            <div class="bar" style="height: 70%"></div>
+                            <div class="bar active" style="height: 90%"></div>
+                        </div>
+                        <span class="chart-label">Growth Real</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Equity</span>
+                        <span class="stat-value text-primary">20–30%</span>
+                        <span class="stat-desc"
+                            >El crecimiento también construye empresa.</span
+                        >
+                    </div>
+                </div>
+
+                <div class="role-content">
+                    <div class="role-header">
+                        <div class="icon-box">
+                            <span class="material-symbols-outlined"
+                                >trending_up</span>
+                        </div>
+                        <h2>MARKETER</h2>
+                        <p class="role-sub">
+                            El marketing se aprende lanzando productos reales.
+                        </p>
+                    </div>
+
+                    <div class="pain-points">
+                        <p>Si sabes marketing y:</p>
+                        <ul>
+                            <li>
+                                <span class="dot red"></span> Quieres ir más allá
+                                de clientes pequeños
+                            </li>
+                            <li>
+                                <span class="dot green"></span> Te interesa el growth
+                                real
+                            </li>
+                            <li>
+                                <span class="dot green"></span> Quieres liderar lanzamientos
+                            </li>
+                        </ul>
+                        <p class="welcome-msg">Este es tu sitio.</p>
+                    </div>
+
+                    <div class="role-tasks">
+                        <h3>🧠 Tu rol</h3>
+                        <div class="task-grid">
+                            <div class="task">Validación de mercado</div>
+                            <div class="task">Propuesta de valor</div>
+                            <div class="task">Go-to-market</div>
+                            <div class="task">Tracción y métricas</div>
+                        </div>
+                        <p class="highlight-text">
+                            No ejecutas órdenes. <span class="text-primary"
+                                >Defines estrategia.</span>
+                        </p>
+                    </div>
+
+                    <button class="btn btn-outline full-mobile">
+                        👉 Quiero lanzar y escalar productos reales
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diferenciadores Comunes -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center mb-10">
+                    <h2>POR QUÉ ESTO ES DISTINTO</h2>
+                    <p class="text-muted">
+                        Ya seas Tech o Marketer, las reglas son las mismas.
+                    </p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <span class="material-symbols-outlined"
+                            >folder_open</span
+                        >
+                        <h4>Proyectos reales</h4>
+                        <p>Nada de simulaciones.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <span class="material-symbols-outlined">gavel</span>
+                        <h4>Decisiones reales</h4>
+                        <p>Tú tienes voz y voto.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <span class="material-symbols-outlined">group</span>
+                        <h4>Usuarios reales</h4>
+                        <p>Feedback directo del mercado.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <span class="material-symbols-outlined">school</span>
+                        <h4>Aprendizaje real</h4>
+                        <p>La única forma de aprender es haciendo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Final -->
+        <section class="section final-cta-lab">
+            <div class="container text-center">
+                <h2 class="mb-8">Elige tu camino en el Lab</h2>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large">
+                        <span class="material-symbols-outlined">terminal</span> Soy
+                        Técnico
+                    </button>
+                    <button class="btn btn-primary btn-large">
+                        <span class="material-symbols-outlined"
+                            >trending_up</span
+                        > Soy Marketer
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+</Layout>
+
+<style>
+    /* Utilities Locales */
+    .text-muted {
+        color: var(--text-muted);
+    }
+    .mb-8 {
+        margin-bottom: 2rem;
+    }
+    .mb-10 {
+        margin-bottom: 3rem;
+    }
+    .full-mobile {
+        width: 100%;
+    }
+    @media (min-width: 640px) {
+        .full-mobile {
+            width: auto;
+        }
+    }
+
+    /* Hero Lab */
+    .hero-lab {
+        padding: 6rem 1.5rem;
+        position: relative;
+        background: radial-gradient(
+            circle at center,
+            #18181b 0%,
+            var(--bg-dark) 100%
+        );
+        border-bottom: 1px solid var(--border-color);
+    }
+    .bg-lines {
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+            90deg,
+            #27272a 0px,
+            #27272a 1px,
+            transparent 1px,
+            transparent 40px
+        );
+        opacity: 0.1;
+        pointer-events: none;
+    }
+    .badge-lab {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #27272a;
+        padding: 0.5rem 1rem;
+        border-radius: 99px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        border: 1px solid #3f3f46;
+    }
+    .hero-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+    .hero-subtitle {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: var(--text-muted);
+        margin-bottom: 2rem;
+    }
+    .hero-desc {
+        max-width: 600px;
+        margin: 0 auto 3rem;
+        font-size: 1.1rem;
+        color: var(--text-gray);
+    }
+
+    .lab-selector {
+        display: inline-flex;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        padding: 0.5rem;
+        border-radius: var(--radius-lg);
+        align-items: center;
+    }
+    .selector-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        color: var(--text-gray);
+        font-weight: 700;
+        border-radius: var(--radius-md);
+    }
+    .selector-btn:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: white;
+    }
+    .divider {
+        width: 1px;
+        height: 24px;
+        background: var(--border-color);
+        margin: 0 0.5rem;
+    }
+
+    /* Role Sections General */
+    .section-badge {
+        position: absolute;
+        top: 0;
+        right: 1.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        border-bottom-left-radius: var(--radius-lg);
+        border-bottom-right-radius: var(--radius-lg);
+    }
+    .code-badge {
+        background: #27272a;
+        color: var(--color-primary);
+        border: 1px solid var(--color-primary);
+        border-top: 0;
+    }
+    .growth-badge {
+        background: #27272a;
+        color: #a78bfa;
+        border: 1px solid #a78bfa;
+        border-top: 0;
+    }
+
+    .bg-tech {
+        background: linear-gradient(to bottom right, var(--bg-dark), #111);
+    }
+    .bg-marketing {
+        background: linear-gradient(to bottom left, var(--bg-dark), #111);
+        border-top: 1px solid var(--border-color);
+    }
+
+    .grid-role {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+    @media (min-width: 900px) {
+        .grid-role {
+            grid-template-columns: 1.2fr 0.8fr;
+        }
+        .grid-role.reverse {
+            grid-template-columns: 0.8fr 1.2fr;
+        }
+        .grid-role.reverse .role-visual {
+            order: 1;
+        }
+        .grid-role.reverse .role-content {
+            order: 2;
+        }
+    }
+
+    /* Role Content */
+    .icon-box {
+        display: inline-flex;
+        padding: 0.8rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: var(--radius-md);
+        margin-bottom: 1rem;
+        color: var(--text-white);
+    }
+    .role-header h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+    .role-sub {
+        font-size: 1.1rem;
+        color: var(--color-primary);
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    .pain-points {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+        border-left: 3px solid var(--border-color);
+        margin-bottom: 2rem;
+    }
+    .pain-points p:first-child {
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+    .pain-points ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .pain-points li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--text-gray);
+    }
+    .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+    }
+    .dot.red {
+        background: #ef4444;
+    }
+    .dot.green {
+        background: var(--color-primary);
+    }
+    .welcome-msg {
+        font-weight: 700;
+        color: white;
+        margin-top: 1rem;
+    }
+
+    .role-tasks h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        color: var(--text-muted);
+    }
+    .task-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .task {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        padding: 0.75rem;
+        border-radius: var(--radius-md);
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .highlight-text {
+        font-size: 1.1rem;
+        color: white;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        display: block;
+    }
+
+    /* Visuals */
+    .role-visual {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .code-block {
+        background: #0f0f0f;
+        border: 1px solid #333;
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        font-family: monospace;
+        position: relative;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+    .code-header {
+        display: flex;
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+    }
+    .code-header .dot {
+        width: 10px;
+        height: 10px;
+        background: #333;
+    }
+    pre {
+        color: #a1a1aa;
+        font-size: 0.85rem;
+        overflow-x: auto;
+    }
+
+    .chart-block {
+        background: #0f0f0f;
+        border: 1px solid #333;
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        height: 200px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+    }
+    .bar-chart {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-end;
+        height: 100%;
+    }
+    .bar {
+        width: 30px;
+        background: #333;
+        border-radius: 4px;
+        transition: height 1s;
+    }
+    .bar.active {
+        background: #a78bfa;
+        box-shadow: 0 0 15px rgba(167, 139, 250, 0.4);
+    }
+    .chart-label {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: #a78bfa;
+    }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--color-primary);
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .stat-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--text-muted);
+    }
+    .stat-value {
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin: 0.2rem 0;
+    }
+    .stat-desc {
+        font-size: 0.85rem;
+        color: var(--text-gray);
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    @media (min-width: 600px) {
+        .benefits-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (min-width: 1024px) {
+        .benefits-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .benefit-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+        text-align: center;
+        transition: 0.2s;
+    }
+    .benefit-card:hover {
+        border-color: var(--color-primary);
+        transform: translateY(-3px);
+    }
+    .benefit-card span {
+        font-size: 2rem;
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+        display: block;
+    }
+    .benefit-card h4 {
+        font-size: 1.1rem;
+        color: white;
+        margin-bottom: 0.5rem;
+    }
+    .benefit-card p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+    }
+
+    /* CTA */
+    .final-cta-lab {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1), #111);
+    }
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+    }
+    @media (min-width: 600px) {
+        .cta-buttons {
+            flex-direction: row;
+        }
+    }
+    .btn-large {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+</style>

@@ -1,0 +1,624 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Soy Talent | LanzaSaaS">
+    <Header />
+
+    <main>
+        <!-- Hero Talent -->
+        <section class="hero-talent">
+            <div class="bg-gradient-radial"></div>
+            <div class="container relative text-center">
+                <div class="badge-talent">
+                    <span class="material-symbols-outlined">school</span>
+                    Talent Track
+                </div>
+
+                <h1 class="hero-title">
+                    Empieza desde donde estés. <br />
+                    <span class="text-white"
+                        >Crece más rápido de lo normal.</span
+                    >
+                </h1>
+
+                <div class="hero-intro">
+                    <p>No todos nacen sabiendo.</p>
+                    <p class="text-primary font-bold text-lg">
+                        Pero todos pueden aprender construyendo.
+                    </p>
+                </div>
+
+                <div class="path-visual">
+                    <div class="path-step step-0">Nivel 0</div>
+                    <div class="path-line"></div>
+                    <div class="path-step step-1">Nivel 1-2</div>
+                    <div class="path-line"></div>
+                    <div class="path-step step-lab">LAB (Equity)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Niveles Section -->
+        <section class="section">
+            <div class="container">
+                <div class="levels-grid">
+                    <!-- Nivel 0 -->
+                    <div class="level-card level-0">
+                        <div class="card-badge">🔰 PRINCIPIANTE</div>
+                        <div class="icon-header">
+                            <span class="material-symbols-outlined">sprout</span
+                            >
+                            <h2>Talent Nivel 0</h2>
+                            <span class="subtitle">(Desde Cero)</span>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="context">
+                                Si no tienes conocimientos técnicos o de
+                                marketing, pero tienes:
+                            </p>
+                            <ul class="req-list">
+                                <li>
+                                    <span
+                                        class="material-symbols-outlined icon-check"
+                                        >check</span
+                                    > Ganas
+                                </li>
+                                <li>
+                                    <span
+                                        class="material-symbols-outlined icon-check"
+                                        >check</span
+                                    > Hambre
+                                </li>
+                                <li>
+                                    <span
+                                        class="material-symbols-outlined icon-check"
+                                        >check</span
+                                    > Compromiso
+                                </li>
+                            </ul>
+
+                            <div class="process-box">
+                                <h4>En LanzaSaaS:</h4>
+                                <ol class="steps-list">
+                                    <li>1. Te analizamos</li>
+                                    <li>2. Te formamos</li>
+                                    <li>3. Te damos tareas reales</li>
+                                    <li>4. Apoyo en proyectos reales</li>
+                                </ol>
+                            </div>
+
+                            <div class="result-box">
+                                <span class="material-symbols-outlined"
+                                    >speed</span
+                                >
+                                <p>
+                                    Pasas de 0 a LAB mucho más rápido que en el
+                                    camino tradicional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nivel 1-2 -->
+                    <div class="level-card level-1">
+                        <div class="card-badge highlight">⚙️ INTERMEDIO</div>
+                        <div class="icon-header">
+                            <span class="material-symbols-outlined"
+                                >handyman</span
+                            >
+                            <h2>Talent Nivel 1–2</h2>
+                            <span class="subtitle">(Con Base)</span>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="context">
+                                Si ya sabes algo y buscas aplicar:
+                            </p>
+
+                            <div class="options-list">
+                                <div class="option-item">
+                                    <span class="material-symbols-outlined"
+                                        >work_history</span
+                                    >
+                                    <div>
+                                        <strong>Prácticas</strong>
+                                        <p>
+                                            Entra directamente a aprender
+                                            haciendo.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="option-item">
+                                    <span class="material-symbols-outlined"
+                                        >payments</span
+                                    >
+                                    <div>
+                                        <strong>Roles Remunerados</strong>
+                                        <p>
+                                            Aporta valor inmediato y cobra por
+                                            ello.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="option-item">
+                                    <span class="material-symbols-outlined"
+                                        >trending_up</span
+                                    >
+                                    <div>
+                                        <strong>Crecimiento a LAB</strong>
+                                        <p>
+                                            El camino rápido para convertirte en
+                                            socio.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progresión y Ejemplo -->
+        <section class="section bg-card-dark">
+            <div class="container grid-progression">
+                <div class="progression-info">
+                    <h2 class="mb-6">🚀 PROGRESIÓN REAL</h2>
+                    <p class="desc mb-8">
+                        Aquí no hay techos de cristal. Tu evolución depende de
+                        tu ejecución.
+                    </p>
+
+                    <div class="timeline-vertical">
+                        <div class="timeline-step">
+                            <div class="step-marker"></div>
+                            <h4>Formación</h4>
+                            <p>Adquiere las bases necesarias.</p>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-marker"></div>
+                            <h4>Prácticas</h4>
+                            <p>Aplica en entorno seguro.</p>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-marker active"></div>
+                            <h4>Proyecto Real</h4>
+                            <p>Responsabilidad real en mercado.</p>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-marker active"></div>
+                            <h4>Oferta Personalizada</h4>
+                            <p>El objetivo final.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-example-card">
+                    <div class="offer-header">
+                        <span class="material-symbols-outlined">contract</span>
+                        <h3>Ejemplo de Oferta</h3>
+                    </div>
+                    <div class="offer-body">
+                        <div class="offer-item">
+                            <span class="label">Compensación</span>
+                            <span class="value">Sueldo Base</span>
+                        </div>
+                        <div class="offer-divider">+</div>
+                        <div class="offer-item highlight">
+                            <span class="label">Participación</span>
+                            <span class="value text-primary">2–5% Equity</span>
+                        </div>
+                    </div>
+                    <div class="offer-footer">
+                        <p>Proyección real.</p>
+                        <p class="highlight-footer">
+                            No solo trabajo. <strong>Patrimonio.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="section final-cta-talent text-center">
+            <div class="container">
+                <h2 class="mb-6">Empieza tu carrera hoy</h2>
+                <button class="btn btn-primary btn-large">
+                    👉 Quiero crecer dentro del ecosistema
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+</Layout>
+
+<style>
+    /* Utilities */
+    .text-lg {
+        font-size: 1.25rem;
+    }
+    .font-bold {
+        font-weight: 700;
+    }
+    .bg-card-dark {
+        background-color: #0d0d0d;
+    }
+    .mb-6 {
+        margin-bottom: 1.5rem;
+    }
+    .mb-8 {
+        margin-bottom: 2rem;
+    }
+
+    /* Hero */
+    .hero-talent {
+        padding: 8rem 1.5rem 4rem;
+        position: relative;
+        border-bottom: 1px solid var(--border-color);
+        overflow: hidden;
+    }
+    .bg-gradient-radial {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            circle at top center,
+            #1f2937 0%,
+            var(--bg-dark) 70%
+        );
+        opacity: 0.4;
+        pointer-events: none;
+    }
+
+    .badge-talent {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.5rem 1rem;
+        border-radius: 99px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        color: var(--text-gray);
+    }
+    .hero-title .text-white {
+        color: white;
+    }
+    .hero-intro {
+        max-width: 600px;
+        margin: 0 auto 3rem;
+        color: var(--text-gray);
+    }
+
+    /* Path Visual (Hero) */
+    .path-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+    .path-step {
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-md);
+        font-weight: 700;
+        font-size: 0.9rem;
+        background: #27272a;
+        border: 1px solid #3f3f46;
+        color: var(--text-muted);
+    }
+    .step-lab {
+        background: rgba(16, 185, 129, 0.1);
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+    }
+    .path-line {
+        width: 30px;
+        height: 2px;
+        background: #3f3f46;
+    }
+
+    /* Levels Grid */
+    .levels-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    @media (min-width: 900px) {
+        .levels-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .level-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 0.7rem;
+        font-weight: 900;
+        background: #27272a;
+        padding: 0.3rem 0.6rem;
+        border-radius: 4px;
+        color: var(--text-muted);
+    }
+    .card-badge.highlight {
+        background: rgba(16, 185, 129, 0.1);
+        color: var(--color-primary);
+    }
+
+    .icon-header {
+        padding: 2rem;
+        background: linear-gradient(to bottom, #1f2937, var(--bg-card));
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .icon-header span {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        display: block;
+        color: var(--text-gray);
+    }
+    .level-1 .icon-header span {
+        color: var(--color-primary);
+    }
+    .icon-header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
+    }
+    .subtitle {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+    }
+
+    .card-body {
+        padding: 2rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .context {
+        color: var(--text-gray);
+        font-style: italic;
+        margin-bottom: 1rem;
+    }
+
+    /* Nivel 0 Styles */
+    .req-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        color: white;
+    }
+    .icon-check {
+        color: var(--color-primary);
+    }
+
+    .process-box {
+        background: #18181b;
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+        border: 1px solid #27272a;
+    }
+    .process-box h4 {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 1rem;
+    }
+    .steps-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .steps-list li {
+        color: var(--text-gray);
+        font-size: 0.9rem;
+    }
+
+    .result-box {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-top: auto;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border-color);
+    }
+    .result-box span {
+        font-size: 2rem;
+        color: var(--color-primary);
+    }
+    .result-box p {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: white;
+        line-height: 1.3;
+    }
+
+    /* Nivel 1 Styles */
+    .options-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .option-item {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        background: #18181b;
+        padding: 1rem;
+        border-radius: var(--radius-lg);
+        transition: 0.2s;
+        border: 1px solid transparent;
+    }
+    .option-item:hover {
+        border-color: var(--color-primary);
+        background: rgba(16, 185, 129, 0.05);
+    }
+    .option-item span {
+        color: var(--color-primary);
+        font-size: 1.5rem;
+    }
+    .option-item strong {
+        display: block;
+        color: white;
+        margin-bottom: 0.2rem;
+    }
+    .option-item p {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.4;
+    }
+
+    /* Progression Section */
+    .grid-progression {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+    @media (min-width: 900px) {
+        .grid-progression {
+            grid-template-columns: 1.2fr 0.8fr;
+        }
+    }
+
+    .timeline-vertical {
+        border-left: 2px solid #27272a;
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .timeline-step {
+        position: relative;
+    }
+    .step-marker {
+        position: absolute;
+        left: -39px;
+        top: 2px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #27272a;
+        border: 2px solid var(--bg-card);
+    }
+    .step-marker.active {
+        background: var(--color-primary);
+        box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+    }
+    .timeline-step h4 {
+        font-size: 1.1rem;
+        color: white;
+        margin-bottom: 0.2rem;
+    }
+    .timeline-step p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+    }
+
+    /* Offer Card */
+    .offer-example-card {
+        background: linear-gradient(135deg, #18181b 0%, #000 100%);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-xl);
+        padding: 2rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        transform: rotate(-2deg);
+    }
+    .offer-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #27272a;
+        padding-bottom: 1rem;
+    }
+    .offer-header span {
+        color: var(--color-primary);
+    }
+    .offer-header h3 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .offer-body {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .offer-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: var(--text-muted);
+    }
+    .value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+    }
+    .offer-divider {
+        color: var(--text-muted);
+        font-size: 1.5rem;
+    }
+
+    .offer-footer {
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+    }
+    .highlight-footer {
+        color: white;
+        margin-top: 0.5rem;
+    }
+    .highlight-footer strong {
+        color: var(--color-primary);
+        text-decoration: underline;
+        text-decoration-color: rgba(16, 185, 129, 0.5);
+    }
+
+    /* CTA */
+    .final-cta-talent {
+        background: linear-gradient(to top, #111, var(--bg-dark));
+    }
+    .btn-large {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+</style>

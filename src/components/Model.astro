@@ -1,0 +1,253 @@
+<section id="modelo" class="section">
+    <div class="container">
+        <div class="text-center mb-large">
+            <span class="overline">TU PROPUESTA ÚNICA</span>
+            <h2>LA SOLUCIÓN: EL MODELO LANZASAAS</h2>
+            <p class="desc-lg">
+                Un modelo de co-creación donde cada rol aporta valor real y
+                recibe una parte justa.
+            </p>
+        </div>
+
+        <div class="grid-3-col align-start">
+            <!-- Card Founder -->
+            <div class="role-card">
+                <div class="role-header">
+                    <div class="icon-corner">
+                        <span class="material-symbols-outlined"
+                            >psychology</span>
+                    </div>
+                    <h3>FOUNDER</h3>
+                    <span class="role-subtitle">CEO DEL PROYECTO</span>
+                </div>
+                <div class="role-body">
+                    <p>
+                        Personas con visión y liderazgo. Aportan la idea, la
+                        dirección y la toma de decisiones.
+                    </p>
+                    <div class="equity-box">
+                        <div class="equity-label">
+                            <span>Equity</span>
+                            <span>30–40%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="fill" style="width: 40%"></div>
+                        </div>
+                        <small
+                            ><span class="material-symbols-outlined">group</span
+                            > Lideran proyectos reales</small
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card LAB -->
+            <div class="role-card featured">
+                <div class="featured-tag">Corazón del Ecosistema</div>
+                <div class="role-header gradient-bg">
+                    <div class="icon-corner">
+                        <span class="material-symbols-outlined">code</span>
+                    </div>
+                    <h3>LAB – CONSTRUCCIÓN</h3>
+                    <span class="role-subtitle text-primary"
+                        >Tech & Marketing</span
+                    >
+                </div>
+                <div class="role-body">
+                    <p>
+                        Marketing (Growth) y Técnico (Producto). Construyen el
+                        MVP, validan el mercado, escalan o descartan.
+                    </p>
+                    <div class="equity-box">
+                        <div class="equity-label">
+                            <span>Equity por rol</span>
+                            <span>20–30%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="fill" style="width: 30%"></div>
+                        </div>
+                        <small
+                            ><span class="material-symbols-outlined"
+                                >construction</span
+                            > Construyen algo propio</small
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Talent -->
+            <div class="role-card">
+                <div class="role-header">
+                    <div class="icon-corner">
+                        <span class="material-symbols-outlined">school</span>
+                    </div>
+                    <h3>TALENT</h3>
+                    <span class="role-subtitle">CANTERA Y MOTOR</span>
+                </div>
+                <div class="role-body">
+                    <p>
+                        La cantera y el motor de crecimiento. Personas que
+                        empiezan desde cero o con base.
+                    </p>
+                    <div class="equity-box">
+                        <div class="equity-label">
+                            <span>Evolución</span>
+                            <span>Equity / Contrato</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="fill gradient" style="width: 100%">
+                            </div>
+                        </div>
+                        <small
+                            ><span class="material-symbols-outlined"
+                                >trending_up</span
+                            > Crecimiento acelerado</small
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .mb-large {
+        margin-bottom: 4rem;
+    }
+    .overline {
+        color: var(--color-primary);
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .desc-lg {
+        font-size: 1.1rem;
+        color: var(--text-gray);
+    }
+
+    .align-start {
+        align-items: flex-start;
+    }
+    .role-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: border-color 0.3s;
+    }
+    .role-card:hover {
+        border-color: rgba(16, 185, 129, 0.5);
+    }
+
+    .role-card.featured {
+        border: 2px solid var(--color-primary);
+        transform: translateY(-1rem);
+        position: relative;
+        z-index: 10;
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+    }
+    @media (max-width: 1024px) {
+        .role-card.featured {
+            transform: none;
+        }
+    }
+
+    .featured-tag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: var(--color-primary);
+        color: black;
+        font-size: 0.65rem;
+        font-weight: 900;
+        padding: 0.4rem 0.8rem;
+        border-bottom-left-radius: var(--radius-lg);
+        text-transform: uppercase;
+    }
+
+    .role-header {
+        padding: 2rem;
+        background: linear-gradient(to bottom right, #27272a, var(--bg-card));
+        border-bottom: 1px solid var(--border-color);
+        height: 140px;
+        position: relative;
+    }
+    .role-header.gradient-bg {
+        background: linear-gradient(
+            to bottom right,
+            rgba(16, 185, 129, 0.2),
+            var(--bg-card)
+        );
+    }
+    .icon-corner {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 0.5rem;
+        border-radius: var(--radius-md);
+    }
+    .role-subtitle {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #6b7280;
+    }
+
+    .role-body {
+        padding: 2rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .role-body p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+    }
+
+    .equity-box {
+        margin-top: auto;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border-color);
+    }
+    .equity-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+    .equity-label span:last-child {
+        color: var(--color-primary);
+        font-size: 1rem;
+    }
+    .progress-bar {
+        width: 100%;
+        height: 8px;
+        background: #27272a;
+        border-radius: 99px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+    .fill {
+        height: 100%;
+        background: var(--color-primary);
+    }
+    .fill.gradient {
+        background: linear-gradient(to right, #71717a, var(--color-primary));
+    }
+    .role-body small {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #9ca3af;
+        font-size: 0.75rem;
+    }
+</style>

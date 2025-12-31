@@ -10,16 +10,25 @@ const { title } = Astro.props;
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="LanzaSaaS LAB Landing Page" />
-        <meta name="viewport" content="width=device-width" />
+        <meta
+            name="description"
+            content="LanzaSaaS - Construye empresas SaaS en equipo."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{title}</title>
+
+        <!-- Google Fonts & Icons -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
         />
-        <title>{title}</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <slot />
@@ -27,79 +36,143 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+    /* --- Variables Globales --- */
     :root {
-        --bg-dark: #050a08;
-        --bg-card: #0c1410;
-        --bg-card-hover: #121d17;
-        --primary-green: #4ade80;
-        --primary-green-hover: #22c55e;
+        --color-primary: #10b981; /* Emerald 500 */
+        --color-primary-hover: #059669; /* Emerald 600 */
+        --color-primary-dim: rgba(16, 185, 129, 0.1);
+
+        --bg-dark: #0a0a0a;
+        --bg-card: #121212;
+        --border-color: #27272a;
+
         --text-white: #ffffff;
-        --text-gray: #9ca3af;
-        --text-dark: #000000;
-        --accent-red: #ef4444;
-        --border-color: #1f2937;
+        --text-gray: #d1d5db;
+        --text-muted: #9ca3af;
+
+        --font-display: "Space Grotesk", sans-serif;
+        --font-body: "Noto Sans", sans-serif;
+
+        --container-width: 1200px;
+        --radius-md: 0.5rem;
+        --radius-lg: 0.75rem;
+        --radius-xl: 1rem;
     }
 
+    /* --- Reset --- */
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
     }
-
-    body {
-        font-family: "Inter", sans-serif;
-        background-color: var(--bg-dark);
+    html {
+        font-family: var(--font-body);
+        background: var(--bg-dark);
         color: var(--text-white);
+        scroll-behavior: smooth;
+    }
+    body {
+        overflow-x: hidden;
         line-height: 1.6;
     }
-
     h1,
     h2,
     h3,
-    h4,
-    h5,
-    h6 {
+    h4 {
+        font-family: var(--font-display);
         line-height: 1.2;
     }
-
     a {
         text-decoration: none;
         color: inherit;
+        transition: 0.2s;
     }
-
     ul {
         list-style: none;
     }
-
-    .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    /* common button styles */
-    .btn {
-        display: inline-block;
-        padding: 12px 24px;
-        border-radius: 50px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        transition: all 0.3s ease;
-        cursor: pointer;
+    button {
         border: none;
+        background: none;
+        cursor: pointer;
+        font-family: var(--font-body);
     }
 
+    .material-symbols-outlined {
+        font-variation-settings:
+            "FILL" 1,
+            "wght" 400,
+            "GRAD" 0,
+            "opsz" 24;
+        vertical-align: middle;
+    }
+
+    /* --- Clases de Utilidad Globales --- */
+    .container {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .section {
+        padding: 6rem 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        position: relative;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+    .text-primary {
+        color: var(--color-primary);
+    }
+    .text-red {
+        color: #ef4444;
+        font-weight: 700;
+    }
+    .relative {
+        position: relative;
+    }
+
+    /* --- Botones Compartidos --- */
+    .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius-md);
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
     .btn-primary {
-        background-color: var(--primary-green);
-        color: var(--text-dark);
+        background-color: var(--color-primary);
+        color: black;
     }
-
     .btn-primary:hover {
-        background-color: var(--primary-green-hover);
-        transform: translateY(-2px);
+        background-color: var(--color-primary-hover);
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
     }
 
-    .text-green {
-        color: var(--primary-green);
+    .btn-outline {
+        border: 1px solid #4b5563;
+        color: white;
+    }
+    .btn-outline:hover {
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+        background: rgba(16, 185, 129, 0.05);
+    }
+
+    /* --- Grids Comunes --- */
+    .grid-3-col {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    @media (min-width: 768px) {
+        .grid-3-col {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 </style>
