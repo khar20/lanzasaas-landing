@@ -1,25 +1,25 @@
 <section class="section final-cta">
     <div class="container text-center">
-        <h2>LLAMADA FINAL A LA ACCIÓN</h2>
+        <h2>¿LISTO PARA CONSTRUIR?</h2>
         <p class="desc mb-8">
-            Construye empresas reales, crece profesionalmente y hazlo en equipo.
+            Empresas reales, crecimiento profesional y trabajo en equipo.
         </p>
 
         <div class="cta-grid-box">
             <div class="top-line"></div>
             <p class="roles-label">ELIGE TU ROL</p>
             <div class="roles-buttons grid-4">
-                <button class="btn btn-primary btn-block">
+                <button class="btn btn-outline btn-block role-btn">
                     <span class="material-symbols-outlined">psychology</span> Soy
                     Founder
                 </button>
-                <button class="btn btn-outline btn-block">
+                <button class="btn btn-outline btn-block role-btn">
                     <span class="material-symbols-outlined">code</span> Soy Técnico
                 </button>
-                <button class="btn btn-outline btn-block">
+                <button class="btn btn-outline btn-block role-btn">
                     <span class="material-symbols-outlined">campaign</span> Soy Marketer
                 </button>
-                <button class="btn btn-outline btn-block">
+                <button class="btn btn-outline btn-block role-btn">
                     <span class="material-symbols-outlined">school</span> Desde Cero
                 </button>
             </div>
@@ -94,5 +94,17 @@
     .btn-block .material-symbols-outlined {
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
+    }
+
+    .role-btn {
+        transition: all 0.3s ease;
+        border-color: #3f3f46;
+    }
+    .role-btn:hover {
+        background-color: var(--color-primary);
+        color: black;
+        border-color: var(--color-primary);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
     }
 </style>

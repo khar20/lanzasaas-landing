@@ -34,23 +34,27 @@
         <div class="ecosystem-visual">
             <div class="cross-lines"></div>
             <div class="cards-grid">
-                <div class="mini-card up">
+                <!-- SaaS Product: Escala y flota -->
+                <div class="mini-card saas-product">
                     <span class="material-symbols-outlined icon-green"
                         >rocket</span
-                    ><span>SaaS Product</span>
+                    >
+                    <span>SaaS Product</span>
                 </div>
-                <div class="mini-card">
-                    <span class="material-symbols-outlined">groups</span><span
-                        >Team</span>
+                <!-- Otros: Solo flotan con delay -->
+                <div class="mini-card float-delay-1">
+                    <span class="material-symbols-outlined">groups</span>
+                    <span>Team</span>
                 </div>
-                <div class="mini-card">
-                    <span class="material-symbols-outlined">trending_up</span
-                    ><span>Growth</span>
+                <div class="mini-card float-delay-2">
+                    <span class="material-symbols-outlined">trending_up</span>
+                    <span>Growth</span>
                 </div>
-                <div class="mini-card up">
+                <div class="mini-card float-delay-3">
                     <span class="material-symbols-outlined icon-green"
                         >pie_chart</span
-                    ><span>Equity</span>
+                    >
+                    <span>Equity</span>
                 </div>
             </div>
         </div>
@@ -138,6 +142,34 @@
         position: relative;
         z-index: 2;
     }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes scale-pulse {
+        0% {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+        }
+        50% {
+            transform: scale(1.15);
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+        }
+        100% {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+        }
+    }
+
     .mini-card {
         background: var(--bg-card);
         border: 1px solid rgba(16, 185, 129, 0.3);
@@ -148,15 +180,27 @@
         align-items: center;
         gap: 0.5rem;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s;
+
+        animation: float 6s ease-in-out infinite;
     }
-    .mini-card:hover {
-        transform: scale(1.05);
+
+    .saas-product {
         border-color: var(--color-primary);
+        background: rgba(16, 185, 129, 0.05);
+        animation: scale-pulse 4s ease-in-out infinite;
+        z-index: 10;
     }
-    .mini-card.up {
-        transform: translateY(1.5rem);
+
+    .float-delay-1 {
+        animation-delay: 1s;
     }
+    .float-delay-2 {
+        animation-delay: 2s;
+    }
+    .float-delay-3 {
+        animation-delay: 1.5s;
+    }
+
     .icon-green {
         color: var(--color-primary);
     }

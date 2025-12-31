@@ -10,7 +10,8 @@
 
         <h1>
             Construye empresas SaaS <br /><span class="text-gradient"
-                >en equipo.</span>
+                >en equipo.</span
+            >
         </h1>
         <h2>Con visión, equity y propósito.</h2>
 
@@ -31,17 +32,17 @@
         <div class="roles-selector">
             <p class="roles-label">ELIGE TU ROL Y ENTRA AL ECOSISTEMA</p>
             <div class="roles-buttons">
-                <button class="btn btn-primary btn-glow">
+                <button class="btn btn-outline role-btn">
                     <span class="material-symbols-outlined">psychology</span> Soy
                     Founder
                 </button>
-                <button class="btn btn-outline">
+                <button class="btn btn-outline role-btn">
                     <span class="material-symbols-outlined">code</span> Soy Técnico
                 </button>
-                <button class="btn btn-outline">
+                <button class="btn btn-outline role-btn">
                     <span class="material-symbols-outlined">campaign</span> Soy Marketer
                 </button>
-                <button class="btn btn-outline">
+                <button class="btn btn-outline role-btn">
                     <span class="material-symbols-outlined">school</span> Desde Cero
                 </button>
             </div>
@@ -160,9 +161,6 @@
         color: var(--color-primary);
         font-weight: 700;
     }
-    .btn-glow {
-        box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
-    }
 
     .roles-selector {
         width: 100%;
@@ -181,5 +179,17 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+    }
+
+    .role-btn {
+        transition: all 0.3s ease;
+    }
+
+    .role-btn:hover {
+        background-color: var(--color-primary);
+        color: black;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+        transform: translateY(-2px);
     }
 </style>

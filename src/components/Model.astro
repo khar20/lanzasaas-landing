@@ -1,21 +1,12 @@
 <section id="modelo" class="section">
     <div class="container">
-        <div class="text-center mb-large">
-            <span class="overline">TU PROPUESTA ÚNICA</span>
-            <h2>LA SOLUCIÓN: EL MODELO LANZASAAS</h2>
-            <p class="desc-lg">
-                Un modelo de co-creación donde cada rol aporta valor real y
-                recibe una parte justa.
-            </p>
-        </div>
-
         <div class="grid-3-col align-start">
             <!-- Card Founder -->
             <div class="role-card">
                 <div class="role-header">
                     <div class="icon-corner">
-                        <span class="material-symbols-outlined"
-                            >psychology</span>
+                        <span class="material-symbols-outlined">psychology</span
+                        >
                     </div>
                     <h3>FOUNDER</h3>
                     <span class="role-subtitle">CEO DEL PROYECTO</span>
@@ -28,7 +19,7 @@
                     <div class="equity-box">
                         <div class="equity-label">
                             <span>Equity</span>
-                            <span>30–40%</span>
+                            <span>30-40%</span>
                         </div>
                         <div class="progress-bar">
                             <div class="fill" style="width: 40%"></div>
@@ -45,10 +36,11 @@
             <div class="role-card featured">
                 <div class="featured-tag">Corazón del Ecosistema</div>
                 <div class="role-header gradient-bg">
-                    <div class="icon-corner">
+                    <div class="icon-corner featured-icons">
                         <span class="material-symbols-outlined">code</span>
+                        <span class="material-symbols-outlined">campaign</span>
                     </div>
-                    <h3>LAB – CONSTRUCCIÓN</h3>
+                    <h3>LAB - CONSTRUCCIÓN</h3>
                     <span class="role-subtitle text-primary"
                         >Tech & Marketing</span
                     >
@@ -61,7 +53,7 @@
                     <div class="equity-box">
                         <div class="equity-label">
                             <span>Equity por rol</span>
-                            <span>20–30%</span>
+                            <span>20-30%</span>
                         </div>
                         <div class="progress-bar">
                             <div class="fill" style="width: 30%"></div>
@@ -125,10 +117,10 @@
         font-size: 1.1rem;
         color: var(--text-gray);
     }
-
     .align-start {
         align-items: flex-start;
     }
+
     .role-card {
         background: var(--bg-card);
         border: 1px solid var(--border-color);
@@ -167,6 +159,7 @@
         padding: 0.4rem 0.8rem;
         border-bottom-left-radius: var(--radius-lg);
         text-transform: uppercase;
+        z-index: 20;
     }
 
     .role-header {
@@ -183,6 +176,7 @@
             var(--bg-card)
         );
     }
+
     .icon-corner {
         position: absolute;
         top: 1rem;
@@ -190,7 +184,14 @@
         background: rgba(255, 255, 255, 0.05);
         padding: 0.5rem;
         border-radius: var(--radius-md);
+        display: flex;
+        gap: 0.5rem;
     }
+
+    .featured .featured-icons {
+        top: 3.5rem;
+    }
+
     .role-subtitle {
         font-size: 0.75rem;
         font-weight: 700;
@@ -198,7 +199,6 @@
         letter-spacing: 0.05em;
         color: #6b7280;
     }
-
     .role-body {
         padding: 2rem;
         flex: 1;
@@ -206,11 +206,6 @@
         flex-direction: column;
         gap: 1.5rem;
     }
-    .role-body p {
-        font-size: 0.9rem;
-        color: var(--text-muted);
-    }
-
     .equity-box {
         margin-top: auto;
         padding-top: 1.5rem;
