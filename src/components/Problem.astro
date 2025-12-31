@@ -1,11 +1,13 @@
 <section id="problema" class="section bg-black">
     <div class="bg-radial"></div>
-    <div class="container">
+
+    <div class="container relative z-10">
         <div class="text-center mb-large">
             <h2>EL PROBLEMA ACTUAL</h2>
             <p class="desc-lg">
                 Empatía real con el mercado. <span class="text-red"
-                    >Hoy el sistema está roto.</span>
+                    >Hoy el sistema está roto.</span
+                >
             </p>
         </div>
 
@@ -20,6 +22,7 @@
                     para ejecutar ni socios para contrastar visión.
                 </p>
             </article>
+
             <article class="card card-hover-red">
                 <div class="card-icon-bg red">
                     <span class="material-symbols-outlined">work_off</span>
@@ -30,6 +33,7 @@
                     Mucho talento infrautilizado picando código sin ver impacto.
                 </p>
             </article>
+
             <article class="card card-hover-red">
                 <div class="card-icon-bg red">
                     <span class="material-symbols-outlined">school</span>
@@ -46,7 +50,8 @@
             <p>
                 La mayoría: <span class="text-red"
                     >O emprende solo y se quema, O trabaja para otros sin
-                    construir nada propio.</span>
+                    construir nada propio.</span
+                >
             </p>
         </div>
     </div>
@@ -55,7 +60,10 @@
 <style>
     .bg-black {
         background-color: black;
+        position: relative;
+        overflow: hidden;
     }
+
     .bg-radial {
         position: absolute;
         top: 0;
@@ -64,14 +72,22 @@
         bottom: 0;
         background: radial-gradient(
             circle at center,
-            rgba(24, 24, 27, 0.5),
-            black
+            rgba(40, 40, 45, 0.4),
+            black 70%
         );
         pointer-events: none;
+        z-index: 0;
     }
+
+    .z-10 {
+        position: relative;
+        z-index: 10;
+    }
+
     .mb-large {
         margin-bottom: 4rem;
     }
+
     .desc-lg {
         font-size: 1.25rem;
         color: var(--text-muted);
@@ -83,19 +99,25 @@
         border: 1px solid var(--border-color);
         padding: 2rem;
         border-radius: var(--radius-xl);
-        transition: 0.3s;
+        transition:
+            border-color 0.3s ease,
+            transform 0.3s ease;
         height: 100%;
-        position: relative;
-        z-index: 1;
+        display: flex;
+        flex-direction: column;
     }
+
     .card h3 {
         font-size: 1.25rem;
         font-weight: 700;
         margin-bottom: 1rem;
+        color: white;
     }
+
     .card p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         color: var(--text-muted);
+        line-height: 1.6;
     }
 
     .card-icon-bg {
@@ -107,24 +129,36 @@
         justify-content: center;
         margin-bottom: 1.5rem;
     }
+
     .card-icon-bg.red {
         background: rgba(239, 68, 68, 0.1);
         color: #ef4444;
     }
+
     .card-hover-red:hover {
         border-color: rgba(239, 68, 68, 0.5);
     }
 
     .alert-box {
         margin-top: 4rem;
-        background: rgba(69, 10, 10, 0.3);
-        border: 1px solid rgba(127, 29, 29, 0.5);
-        padding: 1.5rem;
+        background: rgba(69, 10, 10, 0.2);
+        border: 1px solid rgba(127, 29, 29, 0.4);
+        padding: 1.5rem 2rem;
         border-radius: var(--radius-lg);
-        display: inline-block;
         text-align: center;
         width: 100%;
-        position: relative;
-        z-index: 1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .alert-box p {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: white;
+    }
+
+    .text-red {
+        color: #ef4444;
+        font-weight: 700;
     }
 </style>
