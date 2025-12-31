@@ -32,25 +32,57 @@
         </div>
 
         <div class="ecosystem-visual">
-            <div class="cross-lines"></div>
-            <div class="cards-grid">
-                <!-- SaaS Product: Escala y flota -->
-                <div class="mini-card saas-product">
+            <!-- Líneas de conexión SVG -->
+            <svg class="connection-lines" viewBox="0 0 400 350">
+                <!-- Centro a Arriba (Team) -->
+                <line
+                    x1="200"
+                    y1="175"
+                    x2="200"
+                    y2="60"
+                    stroke="rgba(16, 185, 129, 0.2)"
+                    stroke-width="2"></line>
+                <!-- Centro a Izquierda (Growth) -->
+                <line
+                    x1="200"
+                    y1="175"
+                    x2="80"
+                    y2="290"
+                    stroke="rgba(16, 185, 129, 0.2)"
+                    stroke-width="2"></line>
+                <!-- Centro a Derecha (Equity) -->
+                <line
+                    x1="200"
+                    y1="175"
+                    x2="320"
+                    y2="290"
+                    stroke="rgba(16, 185, 129, 0.2)"
+                    stroke-width="2"></line>
+            </svg>
+
+            <div class="cards-layout">
+                <!-- CENTRO: SaaS Product -->
+                <div class="mini-card saas-product center-card">
                     <span class="material-symbols-outlined icon-green"
                         >rocket</span
                     >
                     <span>SaaS Product</span>
                 </div>
-                <!-- Otros: Solo flotan con delay -->
-                <div class="mini-card float-delay-1">
+
+                <!-- TRIÁNGULO: Team (Arriba) -->
+                <div class="mini-card float-delay-1 top-card">
                     <span class="material-symbols-outlined">groups</span>
                     <span>Team</span>
                 </div>
-                <div class="mini-card float-delay-2">
+
+                <!-- TRIÁNGULO: Growth (Abajo Izq) -->
+                <div class="mini-card float-delay-2 bottom-left-card">
                     <span class="material-symbols-outlined">trending_up</span>
                     <span>Growth</span>
                 </div>
-                <div class="mini-card float-delay-3">
+
+                <!-- TRIÁNGULO: Equity (Abajo Der) -->
+                <div class="mini-card float-delay-3 bottom-right-card">
                     <span class="material-symbols-outlined icon-green"
                         >pie_chart</span
                     >
@@ -114,81 +146,112 @@
 
     .ecosystem-visual {
         position: relative;
+        min-height: 400px;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 400px;
     }
-    .cross-lines {
-        position: absolute;
-        width: 2px;
-        height: 150px;
-        background: rgba(16, 185, 129, 0.2);
-        transform: rotate(45deg);
-    }
-    .cross-lines::after {
-        content: "";
+
+    .connection-lines {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: inherit;
-        transform: rotate(90deg);
+        max-width: 400px;
+        max-height: 350px;
+        z-index: 0;
+        pointer-events: none;
     }
 
-    .cards-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+    .cards-layout {
         position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: 350px;
         z-index: 2;
-    }
-
-    @keyframes float {
-        0% {
-            transform: translateY(0px);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-        100% {
-            transform: translateY(0px);
-        }
-    }
-
-    @keyframes scale-pulse {
-        0% {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
-        }
-        50% {
-            transform: scale(1.15);
-            box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
-        }
-        100% {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
-        }
     }
 
     .mini-card {
         background: var(--bg-card);
         border: 1px solid rgba(16, 185, 129, 0.3);
-        padding: 1.5rem;
+        padding: 1.2rem;
         border-radius: var(--radius-lg);
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 0.5rem;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-
+        width: 110px;
+        height: 100px;
+        position: absolute;
         animation: float 6s ease-in-out infinite;
+        text-align: center;
+    }
+
+    .mini-card span:last-child {
+        font-size: 0.85rem;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    .center-card {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        width: 130px;
+        height: 120px;
+        animation: scale-pulse 4s ease-in-out infinite;
+    }
+
+    .top-card {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bottom-left-card {
+        bottom: 0;
+        left: 0;
+    }
+
+    .bottom-right-card {
+        bottom: 0;
+        right: 0;
     }
 
     .saas-product {
         border-color: var(--color-primary);
-        background: rgba(16, 185, 129, 0.05);
-        animation: scale-pulse 4s ease-in-out infinite;
-        z-index: 10;
+        background:
+            linear-gradient(rgba(16, 185, 129, 0.05), rgba(16, 185, 129, 0.05)),
+            var(--bg-card);
+    }
+
+    @keyframes float {
+        0% {
+            margin-top: 0px;
+        }
+        50% {
+            margin-top: -10px;
+        }
+        100% {
+            margin-top: 0px;
+        }
+    }
+
+    @keyframes scale-pulse {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+        }
+        50% {
+            transform: translate(-50%, -50%) scale(1.05);
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+        }
     }
 
     .float-delay-1 {

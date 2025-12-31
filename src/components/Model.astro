@@ -1,15 +1,24 @@
 <section id="modelo" class="section">
     <div class="container">
+        <div class="text-center mb-large">
+            <span class="overline">TU PROPUESTA ÚNICA</span>
+            <h2>LA SOLUCIÓN: EL MODELO LANZASAAS</h2>
+            <p class="desc-lg">
+                Un modelo de co-creación donde cada rol aporta valor real y
+                recibe una parte justa.
+            </p>
+        </div>
+
         <div class="grid-3-col align-start">
             <!-- Card Founder -->
             <div class="role-card">
                 <div class="role-header">
-                    <div class="icon-corner">
+                    <h3>FOUNDER</h3>
+                    <span class="role-subtitle">CEO DEL PROYECTO</span>
+                    <div class="role-icons">
                         <span class="material-symbols-outlined">psychology</span
                         >
                     </div>
-                    <h3>FOUNDER</h3>
-                    <span class="role-subtitle">CEO DEL PROYECTO</span>
                 </div>
                 <div class="role-body">
                     <p>
@@ -32,18 +41,18 @@
                 </div>
             </div>
 
-            <!-- Card LAB -->
+            <!-- Card LAB (Featured) -->
             <div class="role-card featured">
                 <div class="featured-tag">Corazón del Ecosistema</div>
                 <div class="role-header gradient-bg">
-                    <div class="icon-corner featured-icons">
-                        <span class="material-symbols-outlined">code</span>
-                        <span class="material-symbols-outlined">campaign</span>
-                    </div>
                     <h3>LAB - CONSTRUCCIÓN</h3>
                     <span class="role-subtitle text-primary"
                         >Tech & Marketing</span
                     >
+                    <div class="role-icons">
+                        <span class="material-symbols-outlined">code</span>
+                        <span class="material-symbols-outlined">campaign</span>
+                    </div>
                 </div>
                 <div class="role-body">
                     <p>
@@ -70,11 +79,11 @@
             <!-- Card Talent -->
             <div class="role-card">
                 <div class="role-header">
-                    <div class="icon-corner">
-                        <span class="material-symbols-outlined">school</span>
-                    </div>
                     <h3>TALENT</h3>
                     <span class="role-subtitle">CANTERA Y MOTOR</span>
+                    <div class="role-icons">
+                        <span class="material-symbols-outlined">school</span>
+                    </div>
                 </div>
                 <div class="role-body">
                     <p>
@@ -163,11 +172,16 @@
     }
 
     .role-header {
-        padding: 2rem;
+        padding: 3rem 2rem;
+        padding-bottom: 1rem;
         background: linear-gradient(to bottom right, #27272a, var(--bg-card));
         border-bottom: 1px solid var(--border-color);
-        height: 140px;
+        min-height: 160px;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
     }
     .role-header.gradient-bg {
         background: linear-gradient(
@@ -177,19 +191,18 @@
         );
     }
 
-    .icon-corner {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: rgba(255, 255, 255, 0.05);
-        padding: 0.5rem;
-        border-radius: var(--radius-md);
+    .role-icons {
         display: flex;
         gap: 0.5rem;
+        margin-top: 1rem;
+        color: white;
     }
 
-    .featured .featured-icons {
-        top: 3.5rem;
+    .role-icons span {
+        font-size: 1.8rem;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.4rem;
+        border-radius: var(--radius-md);
     }
 
     .role-subtitle {
@@ -199,6 +212,7 @@
         letter-spacing: 0.05em;
         color: #6b7280;
     }
+
     .role-body {
         padding: 2rem;
         flex: 1;
