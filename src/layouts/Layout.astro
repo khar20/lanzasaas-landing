@@ -1,4 +1,8 @@
 ---
+import "@fontsource/space-grotesk";
+import "@fontsource/noto-sans";
+import "@fontsource-variable/material-symbols-outlined";
+
 interface Props {
     title: string;
 }
@@ -17,18 +21,6 @@ const { title } = Astro.props;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <title>{title}</title>
-
-        <!-- Google Fonts & Icons -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-            rel="stylesheet"
-        />
     </head>
     <body>
         <slot />
@@ -96,12 +88,29 @@ const { title } = Astro.props;
     }
 
     .material-symbols-outlined {
+        font-family: "Material Symbols Outlined Variable", sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        white-space: nowrap;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 1em;
+        height: 1em;
+        overflow: hidden;
+        contain: content;
+
         font-variation-settings:
             "FILL" 1,
             "wght" 400,
             "GRAD" 0,
             "opsz" 24;
-        vertical-align: middle;
     }
 
     .container {
