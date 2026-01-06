@@ -1,11 +1,12 @@
 import type { APIRoute } from 'astro';
 
-export const POST: APIRoute = async ({ request }) => {
-    const AGENT_URL = import.meta.env.AGENT_WEBHOOK_URL;
+export const POST: APIRoute = async ({ request, locals }) => {
+    const AGENT_URL = locals.runtime?.env?.AGENT_URL || import.meta.env.AGENT_URL
 
     if (!AGENT_URL) {
-        return new Response(JSON.stringify({ error: 'Server configuration error' }), {
+        return new Response(JSON.stringify({ error: 'Server configuration error: Missing AGENT_URL' }), {
             status: 500,
+            headers: { 'Content-Type': 'application/json' }
         });
     }
 
@@ -33,8 +34,10 @@ export const POST: APIRoute = async ({ request }) => {
         });
 
     } catch (error) {
+        console.error(error);
         return new Response(JSON.stringify({ error: 'Error connecting to agent' }), {
             status: 500,
+            headers: { 'Content-Type': 'application/json' }
         });
     }
 };

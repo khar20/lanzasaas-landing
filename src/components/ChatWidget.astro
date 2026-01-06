@@ -1,14 +1,8 @@
----
-// No hay lógica de servidor aquí, todo es cliente
----
-
-<!-- Botón Flotante -->
 <button id="chat-launcher" class="chat-launcher" aria-label="Abrir chat">
     <span class="material-symbols-outlined icon-open">chat_bubble</span>
     <span class="material-symbols-outlined icon-close">close</span>
 </button>
 
-<!-- Ventana del Chat -->
 <div id="chat-window" class="chat-window">
     <div class="chat-header">
         <div class="header-info">
@@ -20,15 +14,7 @@
         </div>
     </div>
 
-    <div id="chat-messages" class="chat-messages">
-        <!-- Mensaje de bienvenida -->
-        <div class="message bot">
-            <div class="message-content">
-                ¡Hola! Soy el asistente virtual. ¿En qué puedo ayudarte sobre el
-                ecosistema LanzaSaaS?
-            </div>
-        </div>
-    </div>
+    <div id="chat-messages" class="chat-messages"></div>
 
     <form id="chat-form" class="chat-input-area">
         <input
@@ -71,6 +57,7 @@
         if (!message) return;
 
         addMessage(message, "user");
+
         input.value = "";
         if (sendBtn) sendBtn.disabled = true;
 
@@ -91,20 +78,17 @@
                 data.output ||
                 data.text ||
                 data.message ||
-                "Lo siento, no entendí la respuesta.";
+                "Lo siento, no pude procesar la respuesta.";
             addMessage(botReply, "bot");
         } catch (error) {
             removeMessage(loadingId);
-            addMessage(
-                "Hubo un error de conexión. Inténtalo de nuevo.",
-                "bot error",
-            );
+            addMessage("Error de conexión. Intenta de nuevo.", "bot error");
         }
     });
 
     function addMessage(text: string, type: string) {
         const div = document.createElement("div");
-        div.className = `message ${type}`;
+        div.className = `message ${type} fade-in`;
         div.innerHTML = `<div class="message-content">${text}</div>`;
         messagesContainer?.appendChild(div);
         scrollToBottom();
@@ -115,10 +99,12 @@
         const id = "loading-" + Date.now();
         const div = document.createElement("div");
         div.id = id;
-        div.className = "message bot loading";
+        div.className = "message bot fade-in";
         div.innerHTML = `
-            <div class="typing-indicator">
-                <span></span><span></span><span></span>
+            <div class="message-content loading-bubble">
+                <div class="typing-indicator">
+                    <span></span><span></span><span></span>
+                </div>
             </div>`;
         messagesContainer?.appendChild(div);
         scrollToBottom();
@@ -138,25 +124,111 @@
 </script>
 
 <style>
-    :root {
-        --chat-primary: #10b981;
-        --chat-bg: #18181b;
-        --chat-header: #0a0a0a;
-        --chat-user-bg: #27272a;
-        --chat-text: #ffffff;
+    .chat-messages {
+        flex: 1;
+        padding: 1rem;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
+    .message {
+        display: flex;
+        flex-direction: column;
+        max-width: 85%;
+        opacity: 0;
+        animation: fadeIn 0.3s forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .message.bot {
+        align-self: flex-start;
+    }
+    .message.user {
+        align-self: flex-end;
+    }
+
+    .message-content {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        border-radius: 1rem;
+        word-wrap: break-word;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .message.bot .message-content {
+        background: #27272a; /* Zinc 800 */
+        color: #e4e4e7;
+        border-bottom-left-radius: 2px;
+    }
+
+    .message.user .message-content {
+        background: var(--color-primary);
+        color: #000;
+        font-weight: 500;
+        border-bottom-right-radius: 2px;
+    }
+
+    .message.error .message-content {
+        background: rgba(239, 68, 68, 0.2);
+        color: #fca5a5;
+        border: 1px solid #7f1d1d;
+    }
+
+    .loading-bubble {
+        padding: 0.75rem 1.2rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 50px;
+    }
+    .typing-indicator {
+        display: flex;
+        gap: 4px;
+    }
+    .typing-indicator span {
+        width: 6px;
+        height: 6px;
+        background: #a1a1aa;
+        border-radius: 50%;
+        animation: bounce 1.4s infinite ease-in-out both;
+    }
+    .typing-indicator span:nth-child(1) {
+        animation-delay: -0.32s;
+    }
+    .typing-indicator span:nth-child(2) {
+        animation-delay: -0.16s;
+    }
+    @keyframes bounce {
+        0%,
+        80%,
+        100% {
+            transform: scale(0);
+        }
+        40% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+<style>
     .chat-launcher {
         position: fixed;
         bottom: 2rem;
         right: 2rem;
         width: 60px;
         height: 60px;
-        background: var(--chat-primary);
+        background: var(--color-primary);
         border-radius: 50%;
-        border: none;
         color: black;
-        cursor: pointer;
         box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
         z-index: 9999;
         transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -170,11 +242,9 @@
     }
     .chat-launcher .icon-close {
         display: none;
-        font-size: 24px;
     }
     .chat-launcher .icon-open {
         display: block;
-        font-size: 24px;
     }
 
     .chat-launcher.open {
@@ -196,8 +266,8 @@
         width: 350px;
         height: 500px;
         max-height: 80vh;
-        background: var(--chat-bg);
-        border: 1px solid #27272a;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
         border-radius: 1rem;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
         display: flex;
@@ -216,11 +286,10 @@
         transform: translateY(0) scale(1);
     }
 
-    /* Header */
     .chat-header {
-        background: var(--chat-header);
+        background: #000;
         padding: 1rem;
-        border-bottom: 1px solid #27272a;
+        border-bottom: 1px solid var(--border-color);
     }
     .header-info {
         display: flex;
@@ -228,14 +297,14 @@
         gap: 0.75rem;
     }
     .header-info span {
-        color: var(--chat-primary);
+        color: var(--color-primary);
         font-size: 1.5rem;
     }
     .header-info h3 {
         margin: 0;
         font-size: 1rem;
         color: white;
-        font-family: var(--font-display);
+        font-weight: 700;
     }
     .status-dot {
         font-size: 0.7rem;
@@ -248,97 +317,16 @@
         content: "";
         width: 6px;
         height: 6px;
-        background: var(--chat-primary);
+        background: var(--color-primary);
         border-radius: 50%;
     }
 
-    /* Área de mensajes */
-    .chat-messages {
-        flex: 1;
-        padding: 1rem;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .message {
-        max-width: 85%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .message.bot {
-        align-self: flex-start;
-    }
-    .message.user {
-        align-self: flex-end;
-    }
-
-    .message-content {
-        padding: 0.75rem 1rem;
-        border-radius: 1rem;
-        font-size: 0.9rem;
-        line-height: 1.5;
-        word-wrap: break-word;
-    }
-
-    .message.bot .message-content {
-        background: #27272a;
-        color: #e4e4e7;
-        border-top-left-radius: 0;
-    }
-
-    .message.user .message-content {
-        background: var(--chat-primary);
-        color: black;
-        font-weight: 500;
-        border-bottom-right-radius: 0;
-    }
-
-    .message.error .message-content {
-        background: rgba(239, 68, 68, 0.1);
-        color: #ef4444;
-        border: 1px solid #ef4444;
-    }
-
-    /* Typing Indicator */
-    .typing-indicator {
-        display: flex;
-        gap: 4px;
-        padding: 0.5rem;
-    }
-    .typing-indicator span {
-        width: 6px;
-        height: 6px;
-        background: #71717a;
-        border-radius: 50%;
-        animation: bounce 1.4s infinite ease-in-out both;
-    }
-    .typing-indicator span:nth-child(1) {
-        animation-delay: -0.32s;
-    }
-    .typing-indicator span:nth-child(2) {
-        animation-delay: -0.16s;
-    }
-    @keyframes bounce {
-        0%,
-        80%,
-        100% {
-            transform: scale(0);
-        }
-        40% {
-            transform: scale(1);
-        }
-    }
-
-    /* Input Area */
     .chat-input-area {
         padding: 1rem;
-        border-top: 1px solid #27272a;
+        border-top: 1px solid var(--border-color);
         display: flex;
         gap: 0.5rem;
-        background: var(--chat-header);
+        background: #000;
     }
 
     .chat-input-area input {
@@ -353,14 +341,11 @@
         outline: none;
     }
     .chat-input-area input:focus {
-        border-color: var(--chat-primary);
+        border-color: var(--color-primary);
     }
 
     .chat-input-area button {
-        background: transparent;
-        color: var(--chat-primary);
-        border: none;
-        cursor: pointer;
+        color: var(--color-primary);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -369,7 +354,6 @@
     }
     .chat-input-area button:disabled {
         color: #52525b;
-        cursor: not-allowed;
     }
     .chat-input-area button:not(:disabled):hover {
         transform: scale(1.1);
@@ -383,6 +367,10 @@
             bottom: 0;
             right: 0;
             border-radius: 0;
+        }
+        .chat-launcher {
+            bottom: 1.5rem;
+            right: 1.5rem;
         }
     }
 </style>
