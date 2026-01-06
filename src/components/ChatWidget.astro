@@ -124,102 +124,6 @@
 </script>
 
 <style>
-    .chat-messages {
-        flex: 1;
-        padding: 1rem;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .message {
-        display: flex;
-        flex-direction: column;
-        max-width: 85%;
-        opacity: 0;
-        animation: fadeIn 0.3s forwards;
-    }
-
-    @keyframes fadeIn {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .message.bot {
-        align-self: flex-start;
-    }
-    .message.user {
-        align-self: flex-end;
-    }
-
-    .message-content {
-        padding: 0.75rem 1rem;
-        font-size: 0.9rem;
-        line-height: 1.5;
-        border-radius: 1rem;
-        word-wrap: break-word;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    }
-
-    .message.bot .message-content {
-        background: #27272a; /* Zinc 800 */
-        color: #e4e4e7;
-        border-bottom-left-radius: 2px;
-    }
-
-    .message.user .message-content {
-        background: var(--color-primary);
-        color: #000;
-        font-weight: 500;
-        border-bottom-right-radius: 2px;
-    }
-
-    .message.error .message-content {
-        background: rgba(239, 68, 68, 0.2);
-        color: #fca5a5;
-        border: 1px solid #7f1d1d;
-    }
-
-    .loading-bubble {
-        padding: 0.75rem 1.2rem !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 50px;
-    }
-    .typing-indicator {
-        display: flex;
-        gap: 4px;
-    }
-    .typing-indicator span {
-        width: 6px;
-        height: 6px;
-        background: #a1a1aa;
-        border-radius: 50%;
-        animation: bounce 1.4s infinite ease-in-out both;
-    }
-    .typing-indicator span:nth-child(1) {
-        animation-delay: -0.32s;
-    }
-    .typing-indicator span:nth-child(2) {
-        animation-delay: -0.16s;
-    }
-    @keyframes bounce {
-        0%,
-        80%,
-        100% {
-            transform: scale(0);
-        }
-        40% {
-            transform: scale(1);
-        }
-    }
-</style>
-
-<style>
     .chat-launcher {
         position: fixed;
         bottom: 2rem;
@@ -319,6 +223,100 @@
         height: 6px;
         background: var(--color-primary);
         border-radius: 50%;
+    }
+
+    .chat-messages {
+        flex: 1;
+        padding: 1rem;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .chat-messages :global(.message) {
+        display: flex;
+        flex-direction: column;
+        max-width: 85%;
+        opacity: 0;
+        animation: fadeIn 0.3s forwards;
+    }
+
+    .chat-messages :global(.message.bot) {
+        align-self: flex-start;
+    }
+    .chat-messages :global(.message.user) {
+        align-self: flex-end;
+    }
+
+    .chat-messages :global(.message-content) {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        border-radius: 1rem;
+        word-wrap: break-word;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .chat-messages :global(.message.bot .message-content) {
+        background: #27272a;
+        color: #e4e4e7;
+        border-bottom-left-radius: 2px;
+    }
+
+    .chat-messages :global(.message.user .message-content) {
+        background: var(--color-primary);
+        color: #000;
+        font-weight: 500;
+        border-bottom-right-radius: 2px;
+    }
+
+    .chat-messages :global(.message.error .message-content) {
+        background: rgba(239, 68, 68, 0.2);
+        color: #fca5a5;
+        border: 1px solid #7f1d1d;
+    }
+
+    .chat-messages :global(.loading-bubble) {
+        padding: 0.75rem 1.2rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 50px;
+    }
+    .chat-messages :global(.typing-indicator) {
+        display: flex;
+        gap: 4px;
+    }
+    .chat-messages :global(.typing-indicator span) {
+        width: 6px;
+        height: 6px;
+        background: #a1a1aa;
+        border-radius: 50%;
+        animation: bounce 1.4s infinite ease-in-out both;
+    }
+    .chat-messages :global(.typing-indicator span:nth-child(1)) {
+        animation-delay: -0.32s;
+    }
+    .chat-messages :global(.typing-indicator span:nth-child(2)) {
+        animation-delay: -0.16s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes bounce {
+        0%,
+        80%,
+        100% {
+            transform: scale(0);
+        }
+        40% {
+            transform: scale(1);
+        }
     }
 
     .chat-input-area {
